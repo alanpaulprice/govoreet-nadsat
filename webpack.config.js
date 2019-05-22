@@ -12,15 +12,18 @@ module.exports = {
     port: 3000,
     open: true
   },
-  /*module: {
+  module: {
     rules: [
       {
         test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'babel-loader'
+        include: path.resolve(__dirname, 'src'),
+        loader: 'babel-loader',
+        options: {
+          presets: ['@babel/preset-env', '@babel/preset-react']
+        }
       }
     ]
-  },*/
+  },
   plugins: [
     new HtmlWebpackPlugin({
       title: '',
