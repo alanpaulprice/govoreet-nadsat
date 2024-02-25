@@ -39,7 +39,7 @@ export function Question({ type, correctAnswer, options, updateScore, onQuestion
 					<div className="flex flex-col items-stretch gap-4">
 						{options.map((option: DictionaryItem) => (
 							<button
-								className="flex min-w-48 items-center justify-center border-2 border-neutral-200 bg-neutral-200 p-2 text-2xl text-neutral-950"
+								className="flex min-w-48 items-center justify-center border-2 border-neutral-200 bg-neutral-200 p-2 text-2xl text-neutral-950 hover:text-orange-500"
 								key={option.id}
 								type="button"
 								onClick={() => onAnswerClick(option)}

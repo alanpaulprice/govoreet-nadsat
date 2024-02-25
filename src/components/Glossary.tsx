@@ -7,7 +7,7 @@ export function Glossary({ open, dictionary }: Props) {
 		return (
 			<div className="fixed inset-0 flex items-center justify-center bg-neutral-950 bg-opacity-50 backdrop-blur-sm">
 				<div className="relative border-2 border-neutral-200 bg-neutral-950 p-8">
-					<button className="absolute right-0 top-0 p-4 text-xl text-neutral-200">
+					<button className="absolute right-0 top-0 p-4 text-xl text-neutral-200 hover:text-orange-500">
 						<svg
 							className="stroke-current"
 							xmlns="http://www.w3.org/2000/svg"
@@ -25,7 +25,7 @@ export function Glossary({ open, dictionary }: Props) {
 					<h1 className="mb-4 text-center text-4xl">Glossary</h1>
 					<dl className="flex flex-col gap-2">
 						{dictionary.map(({ nadsat, english }: DictionaryItem) => (
-							<div className="flex justify-between gap-8">
+							<div className="flex justify-between gap-8 hover:text-orange-500">
 								<dt className="font-bold">{nadsat}</dt>
 								<dd>{english}</dd>
 							</div>
