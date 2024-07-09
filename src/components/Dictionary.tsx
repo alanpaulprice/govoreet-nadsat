@@ -21,37 +21,54 @@ export function Dictionary({ open, onClose, dictionary }: Props) {
 				ref={overlayRef}
 				onClick={onOverlayClick}
 			>
-				<div className="relative max-h-screen border-2 border-neutral-200 bg-neutral-950">
-					<header className="flex items-start justify-between">
-						<h1 className="px-2 text-center text-2xl font-bold">Dictionary</h1>
+				<div className="relative flex max-h-screen flex-col gap-4 border-2 border-orange-100 bg-neutral-950 py-4">
+					<header className="flex items-center justify-between">
+						<h1 className="px-4 text-center text-3xl font-bold">dictionary</h1>
 						<button
-							className="flex items-center justify-center p-3 text-neutral-200 hover:text-orange-500"
+							className="mx-3 flex items-center justify-center p-1 font-bold text-orange-100 hover:text-orange-100"
 							type="button"
 							onClick={onClose}
 						>
-							<svg
-								className="stroke-current"
-								xmlns="http://www.w3.org/2000/svg"
-								viewBox="0 0 16 16"
-								width="16"
-								height="16"
-								overflow="visible"
-								stroke-width="4"
-								stroke-linecap="round"
-							>
-								<line x1="0" y1="0" x2="16" y2="16" />
-								<line x1="16" y1="0" x2="0" y2="16" />
-							</svg>
+							close
 						</button>
 					</header>
-					<dl className="flex flex-col gap-2 p-4">
-						{dictionary.map(({ nadsat, english }: DictionaryItem) => (
-							<div className="flex justify-between gap-8 hover:text-orange-500">
-								<dt className="font-bold">{nadsat}</dt>
-								<dd>{english}</dd>
-							</div>
-						))}
-					</dl>
+					<div className="flex gap-4 px-4">
+						<div className="flex flex-col">
+							{dictionary.map(({ id, nadsat, english }: DictionaryItem) => (
+								<div className="flex h-8 items-center">
+									<button
+										className="flex h-4 w-4 items-center justify-center border border-orange-100"
+										type="button"
+										onClick={() => console.log(`${id} : ${nadsat} : ${english}`)}
+									>
+										<svg
+											className="h-4 w-4 stroke-current"
+											xmlns="http://www.w3.org/2000/svg"
+											viewBox="0 0 16 16"
+											strokeLinecap="round"
+										>
+											<line x1="8" y1="0" x2="0" y2="8" />
+											<line x1="16" y1="0" x2="0" y2="16" />
+											<line x1="16" y1="8" x2="8" y2="16" />
+											<line x1="8" y1="0" x2="16" y2="8" />
+											<line x1="0" y1="0" x2="16" y2="16" />
+											<line x1="0" y1="8" x2="8" y2="16" />
+										</svg>
+									</button>
+								</div>
+							))}
+						</div>
+						<div>
+							{dictionary.map(({ nadsat }: DictionaryItem) => (
+								<div className="flex h-8 items-center">{nadsat}</div>
+							))}
+						</div>
+						<div>
+							{dictionary.map(({ english }: DictionaryItem) => (
+								<div className="flex h-8 items-center">{english}</div>
+							))}
+						</div>
+					</div>
 				</div>
 			</div>
 		);
