@@ -19,6 +19,7 @@ export function App({ dictionary }: Props) {
 		options: DictionaryItem[];
 	}>(createQuestion());
 	const [dictionaryOpen, setDictionaryOpen] = useState<boolean>(false);
+	const [favoriteWords, setFavoriteWords] = useState<Set<DictionaryItem["id"]>>(new Set());
 
 	function createQuestion() {
 		const randomDictionaryIndexes = generateUniqueNumbers(0, dictionary.length - 1, numberOfOptions);
@@ -66,7 +67,11 @@ export function App({ dictionary }: Props) {
 				<ScoreDisplay {...{ score }} />
 				<Question {...{ type, correctAnswer, options, updateScore, onQuestionComplete }} />
 			</main>
-			<Dictionary open={dictionaryOpen} onClose={() => setDictionaryOpen(false)} {...{ dictionary }} />
+			<Dictionary
+				open={dictionaryOpen}
+				onClose={() => setDictionaryOpen(false)}
+				{...{ dictionary, favoriteWords, setFavoriteWords }}
+			/>
 		</div>
 	);
 }

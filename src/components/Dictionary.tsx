@@ -1,17 +1,33 @@
-import { MouseEvent, useRef } from "react";
+import { Dispatch, MouseEvent, useRef } from "react";
 import { DictionaryItem } from "@/types";
 
 type Props = {
 	open: boolean;
 	onClose: () => void;
 	dictionary: DictionaryItem[];
+	favoriteWords: Set<DictionaryItem["id"]>;
+	setFavoriteWords: Dispatch<React.SetStateAction<Set<DictionaryItem["id"]>>>;
 };
 
-export function Dictionary({ open, onClose, dictionary }: Props) {
+export function Dictionary({ open, onClose, dictionary, favoriteWords, setFavoriteWords }: Props) {
 	const overlayRef = useRef(null);
 
 	function onOverlayClick(event: MouseEvent<HTMLDivElement>) {
 		if (event.target === overlayRef.current) onClose();
+	}
+
+	function onFavoriteButtonClick(id: DictionaryItem["id"]) {
+		setFavoriteWords((previousState) => {
+			const newState = new Set(previousState);
+
+			if (previousState.has(id)) {
+				newState.delete(id);
+			} else {
+				newState.add(id);
+			}
+
+			return newState;
+		});
 	}
 
 	if (open)
@@ -21,54 +37,73 @@ export function Dictionary({ open, onClose, dictionary }: Props) {
 				ref={overlayRef}
 				onClick={onOverlayClick}
 			>
-				<div className="relative flex max-h-screen flex-col gap-4 border-2 border-orange-100 bg-neutral-950 py-4">
-					<header className="flex items-center justify-between">
-						<h1 className="px-4 text-center text-3xl font-bold">dictionary</h1>
+				<div className="relative flex max-h-screen flex-col gap-4 border-2 border-orange-100 bg-neutral-950">
+					<header className="flex items-start justify-between">
+						<h1 className="mx-4 mt-4 text-center text-3xl font-bold">dictionary</h1>
 						<button
-							className="mx-3 flex items-center justify-center p-1 font-bold text-orange-100 hover:text-orange-100"
+							className="mr-1 mt-1 flex items-center justify-center p-2 font-bold leading-3 text-orange-100 hover:text-orange-500"
 							type="button"
 							onClick={onClose}
 						>
 							close
 						</button>
 					</header>
-					<div className="flex gap-4 px-4">
-						<div className="flex flex-col">
+					<table className="mx-4 mb-4 min-w-96">
+						<thead className="hidden">
+							<tr>
+								<th>Favorite</th>
+								<th>Word</th>
+								<th>Translation</th>
+							</tr>
+						</thead>
+						<tbody>
 							{dictionary.map(({ id, nadsat, english }: DictionaryItem) => (
-								<div className="flex h-8 items-center">
-									<button
-										className="flex h-4 w-4 items-center justify-center border border-orange-100"
-										type="button"
-										onClick={() => console.log(`${id} : ${nadsat} : ${english}`)}
-									>
-										<svg
-											className="h-4 w-4 stroke-current"
-											xmlns="http://www.w3.org/2000/svg"
-											viewBox="0 0 16 16"
-											strokeLinecap="round"
+								<tr
+									key={id}
+									className={
+										"hover:underline" +
+										(favoriteWords.has(id) ? " text-orange-500" : " text-orange-100")
+									}
+								>
+									<td className="align-middle">
+										<input
+											className="hidden"
+											type="checkbox"
+											name={`favorite-${id}`}
+											id={`favorite-${id}`}
+											checked={favoriteWords.has(id)}
+											onChange={() => onFavoriteButtonClick(id)}
+										/>
+										<label
+											className={
+												"block h-4 w-4 cursor-pointer overflow-hidden border bg-transparent" +
+												(favoriteWords.has(id) ? " border-orange-500" : " border-orange-100")
+											}
+											htmlFor={`favorite-${id}`}
 										>
-											<line x1="8" y1="0" x2="0" y2="8" />
-											<line x1="16" y1="0" x2="0" y2="16" />
-											<line x1="16" y1="8" x2="8" y2="16" />
-											<line x1="8" y1="0" x2="16" y2="8" />
-											<line x1="0" y1="0" x2="16" y2="16" />
-											<line x1="0" y1="8" x2="8" y2="16" />
-										</svg>
-									</button>
-								</div>
+											{favoriteWords.has(id) && (
+												<svg
+													className="h-4 w-4 stroke-current"
+													xmlns="http://www.w3.org/2000/svg"
+													viewBox="0 0 16 16"
+													strokeLinecap="round"
+												>
+													<line x1="8" y1="0" x2="0" y2="8" />
+													<line x1="16" y1="0" x2="0" y2="16" />
+													<line x1="16" y1="8" x2="8" y2="16" />
+													<line x1="8" y1="0" x2="16" y2="8" />
+													<line x1="0" y1="0" x2="16" y2="16" />
+													<line x1="0" y1="8" x2="8" y2="16" />
+												</svg>
+											)}
+										</label>
+									</td>
+									<td className="px-4 align-middle">{nadsat}</td>
+									<td className="align-middle">{english}</td>
+								</tr>
 							))}
-						</div>
-						<div>
-							{dictionary.map(({ nadsat }: DictionaryItem) => (
-								<div className="flex h-8 items-center">{nadsat}</div>
-							))}
-						</div>
-						<div>
-							{dictionary.map(({ english }: DictionaryItem) => (
-								<div className="flex h-8 items-center">{english}</div>
-							))}
-						</div>
-					</div>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		);
