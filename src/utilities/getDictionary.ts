@@ -5,12 +5,12 @@ export async function getDictionary(): Promise<DictionaryItem[] | undefined> {
 		const response = await fetch("dictionary.json");
 
 		if (!response.ok) {
-			throw new Error(`HTTP error! Status: ${response.status}`);
+			throw new Error(`HTTP error. Status: ${response.status}`);
 		}
 
 		const data: DictionaryItem[] = await response.json();
 		return data;
 	} catch (error) {
-		console.error("Error fetching data:", error);
+		console.error("Error encountered while loading dictionary.", error);
 	}
 }
