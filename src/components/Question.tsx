@@ -35,7 +35,7 @@ export function Question({ type, correctAnswer, options, updateScore, onQuestion
 					<h2 className="flex h-32 items-center justify-center border-2 border-orange-100 text-center text-6xl">
 						{correctAnswer.nadsat}
 					</h2>
-					<p className="text-center font-bold">Select the correct translation from the options below.</p>
+					<p className="text-center font-bold">select the correct translation from the options below.</p>
 					<div className="flex flex-col items-stretch gap-4">
 						{options.map((option: DictionaryItem) => (
 							<button
@@ -54,11 +54,11 @@ export function Question({ type, correctAnswer, options, updateScore, onQuestion
 		case QuestionType.MultiChoiceToNadsat:
 		default:
 			return (
-				<div className="flex flex-col gap-8 border-2 p-8">
+				<div className="flex flex-col gap-8 border-2  border-orange-100 p-8">
 					<h2 className="flex h-32 items-center justify-center border-2 border-orange-100 text-center text-6xl">
 						{correctAnswer.english}
 					</h2>
-					<p className="text-center font-bold">Select the correct translation from the options below.</p>
+					<p className="text-center font-bold">select the correct translation from the options below.</p>
 					<div className="flex flex-col items-stretch gap-4">
 						{options.map((option: DictionaryItem) => (
 							<button
