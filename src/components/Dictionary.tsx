@@ -1,5 +1,6 @@
 import { MouseEvent, useRef } from "react";
 import { DictionaryItem } from "@/types";
+import { Checkbox } from "./Checkbox";
 
 type Props = {
 	open: boolean;
@@ -17,10 +18,10 @@ export function Dictionary({ open, onClose, dictionary, favoriteWords, setFavori
 	}
 
 	function onFavoriteButtonClick(id: DictionaryItem["id"]) {
-		const newFavoriteWords = [...favoriteWords];
+		let newFavoriteWords = [...favoriteWords];
 
 		if (favoriteWords.includes(id)) {
-			newFavoriteWords.filter((favoriteWord: DictionaryItem["id"]) => favoriteWord === id);
+			newFavoriteWords = newFavoriteWords.filter((favoriteWord: DictionaryItem["id"]) => favoriteWord !== id);
 		} else {
 			newFavoriteWords.push(id);
 		}
@@ -46,7 +47,7 @@ export function Dictionary({ open, onClose, dictionary, favoriteWords, setFavori
 							close
 						</button>
 					</header>
-					<table className="mx-4 mb-4 min-w-96">
+					<table className="mx-4 mb-4 text-orange-100">
 						<thead className="hidden">
 							<tr>
 								<th>Favorite</th>
@@ -59,47 +60,20 @@ export function Dictionary({ open, onClose, dictionary, favoriteWords, setFavori
 								<tr
 									key={id}
 									className={
-										"hover:underline" +
-										(favoriteWords.includes(id) ? " text-orange-500" : " text-orange-100")
+										"align-middle hover:underline" +
+										(favoriteWords.includes(id) ? " text-orange-500" : " ")
 									}
 								>
-									<td className="align-middle">
-										<input
-											className="hidden"
-											type="checkbox"
-											name={`favorite-${id}`}
-											id={`favorite-${id}`}
+									<td>
+										<Checkbox
+											{...{ id }}
+											name={id}
 											checked={favoriteWords.includes(id)}
 											onChange={() => onFavoriteButtonClick(id)}
 										/>
-										<label
-											className={
-												"block h-4 w-4 cursor-pointer overflow-hidden border bg-transparent" +
-												(favoriteWords.includes(id)
-													? " border-orange-500"
-													: " border-orange-100")
-											}
-											htmlFor={`favorite-${id}`}
-										>
-											{favoriteWords.includes(id) && (
-												<svg
-													className="h-4 w-4 stroke-current"
-													xmlns="http://www.w3.org/2000/svg"
-													viewBox="0 0 16 16"
-													strokeLinecap="round"
-												>
-													<line x1="8" y1="0" x2="0" y2="8" />
-													<line x1="16" y1="0" x2="0" y2="16" />
-													<line x1="16" y1="8" x2="8" y2="16" />
-													<line x1="8" y1="0" x2="16" y2="8" />
-													<line x1="0" y1="0" x2="16" y2="16" />
-													<line x1="0" y1="8" x2="8" y2="16" />
-												</svg>
-											)}
-										</label>
 									</td>
-									<td className="px-4 align-middle">{nadsat}</td>
-									<td className="align-middle">{english}</td>
+									<td className="px-4">{nadsat}</td>
+									<td>{english}</td>
 								</tr>
 							))}
 						</tbody>
