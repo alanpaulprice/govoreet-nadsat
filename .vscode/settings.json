@@ -4,5 +4,6 @@
 		"titleBar.inactiveForeground": "#000000CC",
 		"titleBar.activeBackground": "#F97316",
 		"titleBar.inactiveBackground": "#F97316CC"
-	}
+	},
+	"cSpell.words": ["nadsat"]
 }
