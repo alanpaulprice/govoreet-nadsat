@@ -1,12 +1,12 @@
-import { Dispatch, MouseEvent, useRef } from "react";
+import { MouseEvent, useRef } from "react";
 import { DictionaryItem } from "@/types";
 
 type Props = {
 	open: boolean;
 	onClose: () => void;
 	dictionary: DictionaryItem[];
-	favoriteWords: Set<DictionaryItem["id"]>;
-	setFavoriteWords: Dispatch<React.SetStateAction<Set<DictionaryItem["id"]>>>;
+	favoriteWords: Array<DictionaryItem["id"]>;
+	setFavoriteWords: (value: Array<DictionaryItem["id"]>) => void;
 };
 
 export function Dictionary({ open, onClose, dictionary, favoriteWords, setFavoriteWords }: Props) {
@@ -17,17 +17,15 @@ export function Dictionary({ open, onClose, dictionary, favoriteWords, setFavori
 	}
 
 	function onFavoriteButtonClick(id: DictionaryItem["id"]) {
-		setFavoriteWords((previousState) => {
-			const newState = new Set(previousState);
+		const newFavoriteWords = [...favoriteWords];
 
-			if (previousState.has(id)) {
-				newState.delete(id);
-			} else {
-				newState.add(id);
-			}
+		if (favoriteWords.includes(id)) {
+			newFavoriteWords.filter((favoriteWord: DictionaryItem["id"]) => favoriteWord === id);
+		} else {
+			newFavoriteWords.push(id);
+		}
 
-			return newState;
-		});
+		setFavoriteWords(newFavoriteWords);
 	}
 
 	if (open)
@@ -62,7 +60,7 @@ export function Dictionary({ open, onClose, dictionary, favoriteWords, setFavori
 									key={id}
 									className={
 										"hover:underline" +
-										(favoriteWords.has(id) ? " text-orange-500" : " text-orange-100")
+										(favoriteWords.includes(id) ? " text-orange-500" : " text-orange-100")
 									}
 								>
 									<td className="align-middle">
@@ -71,17 +69,19 @@ export function Dictionary({ open, onClose, dictionary, favoriteWords, setFavori
 											type="checkbox"
 											name={`favorite-${id}`}
 											id={`favorite-${id}`}
-											checked={favoriteWords.has(id)}
+											checked={favoriteWords.includes(id)}
 											onChange={() => onFavoriteButtonClick(id)}
 										/>
 										<label
 											className={
 												"block h-4 w-4 cursor-pointer overflow-hidden border bg-transparent" +
-												(favoriteWords.has(id) ? " border-orange-500" : " border-orange-100")
+												(favoriteWords.includes(id)
+													? " border-orange-500"
+													: " border-orange-100")
 											}
 											htmlFor={`favorite-${id}`}
 										>
-											{favoriteWords.has(id) && (
+											{favoriteWords.includes(id) && (
 												<svg
 													className="h-4 w-4 stroke-current"
 													xmlns="http://www.w3.org/2000/svg"

@@ -4,7 +4,8 @@ import { useState } from "react";
 import { DictionaryItem, Score } from "@/types";
 import { generateUniqueNumbers } from "@/utilities";
 import { QuestionType } from "@/enums";
-import { Dictionary, ScoreDisplay, Question } from "./components";
+import { Dictionary, ScoreDisplay, Question } from "@/components";
+import { useLocalStorage } from "@/hooks";
 
 type Props = {
 	dictionary: DictionaryItem[];
@@ -19,7 +20,7 @@ export function App({ dictionary }: Props) {
 		options: DictionaryItem[];
 	}>(createQuestion());
 	const [dictionaryOpen, setDictionaryOpen] = useState<boolean>(false);
-	const [favoriteWords, setFavoriteWords] = useState<Set<DictionaryItem["id"]>>(new Set());
+	const [favoriteWords, setFavoriteWords] = useLocalStorage<Array<DictionaryItem["id"]>>("favoriteWords", []);
 
 	function createQuestion() {
 		const randomDictionaryIndexes = generateUniqueNumbers(0, dictionary.length - 1, numberOfOptions);
