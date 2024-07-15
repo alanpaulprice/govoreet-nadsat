@@ -13,14 +13,13 @@ type Props = {
 };
 
 export function App({ dictionary }: Props) {
-	const numberOfOptions = 3;
 	const [score, setScore] = useLocalStorage<Score>("score", { attempts: 0, correct: 0 });
 	const [question, setQuestion] = useState<{
 		type: QuestionType;
 		correctAnswer: DictionaryItem;
 		options: DictionaryItem[];
 	}>(createQuestion());
-	const [dictionaryOpen, setDictionaryOpen] = useState<boolean>(true);
+	const [dictionaryOpen, setDictionaryOpen] = useState<boolean>(false);
 	const [favoriteWords, setFavoriteWords] = useLocalStorage<Array<DictionaryItem["id"]>>("favoriteWords", []);
 
 	function createQuestion() {
