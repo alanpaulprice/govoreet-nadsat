@@ -1,6 +1,7 @@
 import { MouseEvent, useRef } from "react";
 import { DictionaryItem } from "@/types";
 import { Checkbox } from "./Checkbox";
+import { useLocalStorage } from "@/hooks";
 
 type Props = {
 	open: boolean;
@@ -11,13 +12,22 @@ type Props = {
 };
 
 export function Dictionary({ open, onClose, dictionary, favoriteWords, setFavoriteWords }: Props) {
+	const [favoriteWordsFilterActive, setFavoriteWordsFilterActive] = useLocalStorage<boolean>(
+		"favoriteWordsFilterActive",
+		false
+	);
+
 	const overlayRef = useRef(null);
 
 	function onOverlayClick(event: MouseEvent<HTMLDivElement>) {
 		if (event.target === overlayRef.current) onClose();
 	}
 
-	function onFavoriteButtonClick(id: DictionaryItem["id"]) {
+	function onFilterCheckboxClick() {
+		setFavoriteWordsFilterActive(!favoriteWordsFilterActive);
+	}
+
+	function onFavoriteCheckboxClick(id: DictionaryItem["id"]) {
 		let newFavoriteWords = [...favoriteWords];
 
 		if (favoriteWords.includes(id)) {
@@ -47,35 +57,45 @@ export function Dictionary({ open, onClose, dictionary, favoriteWords, setFavori
 							close
 						</button>
 					</header>
+					<Checkbox
+						className="mx-4"
+						id="filter"
+						name="filter"
+						label="favourites only"
+						checked={favoriteWordsFilterActive}
+						onChange={onFilterCheckboxClick}
+					/>
 					<table className="mx-4 mb-4 text-orange-100">
 						<thead className="hidden">
 							<tr>
-								<th>Favorite</th>
-								<th>Word</th>
-								<th>Translation</th>
+								<th>favourite</th>
+								<th>word</th>
+								<th>translation</th>
 							</tr>
 						</thead>
 						<tbody>
-							{dictionary.map(({ id, nadsat, english }: DictionaryItem) => (
-								<tr
-									key={id}
-									className={
-										"align-middle hover:underline" +
-										(favoriteWords.includes(id) ? " text-orange-500" : " ")
-									}
-								>
-									<td>
-										<Checkbox
-											{...{ id }}
-											name={id}
-											checked={favoriteWords.includes(id)}
-											onChange={() => onFavoriteButtonClick(id)}
-										/>
-									</td>
-									<td className="px-4">{nadsat}</td>
-									<td>{english}</td>
-								</tr>
-							))}
+							{dictionary.map(({ id, nadsat, english }: DictionaryItem) =>
+								favoriteWordsFilterActive === false || favoriteWords.includes(id) ? (
+									<tr
+										key={id}
+										className={
+											"align-middle hover:underline" +
+											(favoriteWords.includes(id) ? " text-orange-500" : "")
+										}
+									>
+										<td>
+											<Checkbox
+												{...{ id }}
+												name={id}
+												checked={favoriteWords.includes(id)}
+												onChange={() => onFavoriteCheckboxClick(id)}
+											/>
+										</td>
+										<td className="px-4">{nadsat}</td>
+										<td>{english}</td>
+									</tr>
+								) : null
+							)}
 						</tbody>
 					</table>
 				</div>
