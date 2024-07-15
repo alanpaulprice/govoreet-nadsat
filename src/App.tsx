@@ -6,6 +6,7 @@ import { generateUniqueNumbers } from "@/utilities";
 import { QuestionType } from "@/enums";
 import { Dictionary, ScoreDisplay, Question } from "@/components";
 import { useLocalStorage } from "@/hooks";
+import { NUMBER_OF_OPTIONS } from "./constants";
 
 type Props = {
 	dictionary: DictionaryItem[];
@@ -23,7 +24,7 @@ export function App({ dictionary }: Props) {
 	const [favoriteWords, setFavoriteWords] = useLocalStorage<Array<DictionaryItem["id"]>>("favoriteWords", []);
 
 	function createQuestion() {
-		const randomDictionaryIndexes = generateUniqueNumbers(0, dictionary.length - 1, numberOfOptions);
+		const randomDictionaryIndexes = generateUniqueNumbers(0, dictionary.length - 1, NUMBER_OF_OPTIONS);
 		const correctAnswerIndex = Math.round(Math.random() * (randomDictionaryIndexes.length - 1));
 		const correctAnswer = dictionary[randomDictionaryIndexes[correctAnswerIndex]];
 		const options = randomDictionaryIndexes.map((dictionaryIndex: number) => dictionary[dictionaryIndex]);
