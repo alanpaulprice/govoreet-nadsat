@@ -3,23 +3,22 @@ import { ChangeEvent } from "react";
 type Props = {
 	id: string;
 	name: string;
+	label?: string;
 	checked: boolean;
 	onChange: (checked: boolean) => void;
+	className?: string;
 };
 
-export function Checkbox({ id, name, checked, onChange }: Props) {
+export function Checkbox({ id, name, label, checked, onChange, className = "" }: Props) {
 	function handleChange(event: ChangeEvent<HTMLInputElement>) {
 		onChange(event.target.checked);
 	}
 
 	return (
-		<div>
+		<div className={`flex items-center gap-2 ${className}`}>
 			<input className="hidden" type="checkbox" {...{ id, name }} checked={checked} onChange={handleChange} />
 			<label
-				className={
-					"block h-4 w-4 cursor-pointer overflow-hidden border bg-transparent" +
-					(checked ? " border-orange-500" : " border-orange-100")
-				}
+				className="block h-4 w-4 cursor-pointer overflow-hidden border border-current bg-transparent"
 				htmlFor={id}
 			>
 				{checked && (
@@ -38,6 +37,11 @@ export function Checkbox({ id, name, checked, onChange }: Props) {
 					</svg>
 				)}
 			</label>
+			{label && (
+				<label className="cursor-pointer" htmlFor={id}>
+					{label}
+				</label>
+			)}
 		</div>
 	);
 }
