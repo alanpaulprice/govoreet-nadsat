@@ -2,11 +2,8 @@ import "./App.css";
 
 import { useState } from "react";
 import { DictionaryItem, Score } from "@/types";
-import { generateUniqueNumbers } from "@/utilities";
-import { QuestionType } from "@/enums";
 import { Dictionary, ScoreDisplay, Question } from "@/components";
-import { useLocalStorage } from "@/hooks";
-import { NUMBER_OF_OPTIONS } from "./constants";
+import { useLocalStorage, useQuestion } from "@/hooks";
 
 type Props = {
 	dictionary: DictionaryItem[];
@@ -14,30 +11,9 @@ type Props = {
 
 export function App({ dictionary }: Props) {
 	const [score, setScore] = useLocalStorage<Score>("score", { attempts: 0, correct: 0 });
-	const [question, setQuestion] = useState<{
-		type: QuestionType;
-		correctAnswer: DictionaryItem;
-		options: DictionaryItem[];
-	}>(createQuestion());
 	const [dictionaryOpen, setDictionaryOpen] = useState<boolean>(false);
 	const [favoriteWords, setFavoriteWords] = useLocalStorage<Array<DictionaryItem["id"]>>("favoriteWords", []);
-
-	function createQuestion() {
-		const randomDictionaryIndexes = generateUniqueNumbers(0, dictionary.length - 1, NUMBER_OF_OPTIONS);
-		const correctAnswerIndex = Math.round(Math.random() * (randomDictionaryIndexes.length - 1));
-		const correctAnswer = dictionary[randomDictionaryIndexes[correctAnswerIndex]];
-		const options = randomDictionaryIndexes.map((dictionaryIndex: number) => dictionary[dictionaryIndex]);
-		const type =
-			Math.round(Math.random()) === 0 ? QuestionType.MultiChoiceFromNadsat : QuestionType.MultiChoiceToNadsat;
-
-		const question = {
-			type,
-			correctAnswer,
-			options,
-		};
-
-		return question;
-	}
+	const [question, nextQuestion] = useQuestion(dictionary);
 
 	function updateScore(correct: boolean) {
 		setScore((previousScore: Score) => ({
@@ -47,7 +23,7 @@ export function App({ dictionary }: Props) {
 	}
 
 	function onQuestionComplete() {
-		setQuestion(createQuestion());
+		nextQuestion();
 	}
 
 	const { type, correctAnswer, options } = question;

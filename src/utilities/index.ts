@@ -1,2 +1,2 @@
-export * from "./getDictionary";
 export * from "./generateUniqueNumbers";
+export * from "./getDictionary";
