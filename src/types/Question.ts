@@ -1,5 +1,5 @@
 import { DictionaryItem } from ".";
-import { QuestionType } from "../enums";
+import { QuestionType } from ".";
 
 export type Question = {
 	type: QuestionType;

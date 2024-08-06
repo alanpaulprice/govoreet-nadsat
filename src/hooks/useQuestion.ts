@@ -1,8 +1,7 @@
 import { useState } from "react";
-import { Dictionary, Question } from "@/types";
+import { Dictionary, Question, QuestionType } from "@/types";
 import { generateUniqueNumbers } from "@/utilities";
-import { NUMBER_OF_OPTIONS } from "@/constants";
-import { QuestionType } from "@/enums";
+import { NUMBER_OF_OPTIONS, QUESTION_TYPES } from "@/constants";
 
 export function useQuestion(dictionary: Dictionary): [Question, () => Question] {
 	const [question, setQuestion] = useState<Question>(createQuestion(dictionary));
@@ -12,8 +11,7 @@ export function useQuestion(dictionary: Dictionary): [Question, () => Question] 
 		const correctAnswerIndex = Math.round(Math.random() * (randomDictionaryIndexes.length - 1));
 		const correctAnswer = dictionary[randomDictionaryIndexes[correctAnswerIndex]];
 		const options = randomDictionaryIndexes.map((dictionaryIndex: number) => dictionary[dictionaryIndex]);
-		const type =
-			Math.round(Math.random()) === 0 ? QuestionType.MultiChoiceFromNadsat : QuestionType.MultiChoiceToNadsat;
+		const type: QuestionType = QUESTION_TYPES[Math.floor(Math.random() * QUESTION_TYPES.length)];
 
 		const question = {
 			type,
