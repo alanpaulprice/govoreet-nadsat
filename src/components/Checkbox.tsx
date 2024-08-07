@@ -1,6 +1,6 @@
 import { ChangeEvent } from "react";
 
-type Props = {
+type CheckboxProps = {
 	id: string;
 	name: string;
 	label?: string;
@@ -9,7 +9,7 @@ type Props = {
 	className?: string;
 };
 
-export function Checkbox({ id, name, label, checked, onChange, className = "" }: Props) {
+export function Checkbox({ id, name, label, checked, onChange, className = "" }: CheckboxProps) {
 	function handleChange(event: ChangeEvent<HTMLInputElement>) {
 		onChange(event.target.checked);
 	}
