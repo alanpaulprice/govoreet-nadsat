@@ -2,7 +2,7 @@ import "./App.css";
 
 import { useState } from "react";
 import { DictionaryItem, Score } from "@/types";
-import { Dictionary, ScoreDisplay, Question } from "@/components";
+import { Dictionary, ScoreDisplay, Question } from "@/modules";
 import { useLocalStorage, useQuestion } from "@/hooks";
 
 type Props = {

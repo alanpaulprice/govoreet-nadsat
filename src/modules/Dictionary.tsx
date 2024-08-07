@@ -1,6 +1,6 @@
 import { MouseEvent, useRef } from "react";
 import { DictionaryItem } from "@/types";
-import { Checkbox } from "./Checkbox";
+import { Checkbox } from "@/components";
 import { useLocalStorage } from "@/hooks";
 
 type Props = {
