@@ -1,8 +1,8 @@
 import { Score } from "@/types";
 
-type Props = { score: Score };
+type ScoreProps = { score: Score };
 
-export function ScoreDisplay({ score: { attempts, correct } }: Props) {
+export function ScoreDisplay({ score: { attempts, correct } }: ScoreProps) {
 	return (
 		<dl className="flex items-center gap-2 self-end">
 			<dt>score:</dt>
