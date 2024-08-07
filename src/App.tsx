@@ -1,5 +1,3 @@
-import "./App.css";
-
 import { useState } from "react";
 import { DictionaryItem, Score } from "@/types";
 import { Dictionary, ScoreDisplay, Question } from "@/modules";
