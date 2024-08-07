@@ -1,7 +1,7 @@
 import { DictionaryItem, QuestionType } from "@/types";
 import { ChangeEvent, FormEvent, useState } from "react";
 
-export type Props = {
+export type QuestionProps = {
 	type: QuestionType;
 	correctAnswer: DictionaryItem;
 	options: DictionaryItem[];
@@ -9,7 +9,7 @@ export type Props = {
 	onQuestionComplete: () => void;
 };
 
-export function Question({ type, correctAnswer, options, updateScore, onQuestionComplete }: Props) {
+export function Question({ type, correctAnswer, options, updateScore, onQuestionComplete }: QuestionProps) {
 	const [inputValue, setInputValue] = useState<string>("");
 
 	function onInputChange(event: ChangeEvent<HTMLInputElement>) {
