@@ -3,7 +3,10 @@
  * in situations where the developer knows that the value will not be undefined.\
  * A common example would be using `.find()` on an array of predefined items.
  */
-export function ensure<T>(argument: T | undefined | null, message: string = "This value was promised to be there."): T {
-	if (argument === undefined || argument === null) throw new TypeError(message);
-	return argument;
+export function ensure<TValue>(
+	value: TValue | undefined | null,
+	message: string = "This value was promised to be there."
+): TValue {
+	if (value === undefined || value === null) throw new TypeError(message);
+	return value;
 }
