@@ -2,12 +2,12 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { App } from "./App.tsx";
 import "./index.css";
-import { DictionaryItem } from "./types/DictionaryItem.ts";
+import { DictionaryEntry } from "./types/DictionaryEntry.ts";
 import { getDictionary } from "./utilities";
 
 async function run() {
 	try {
-		const dictionary: DictionaryItem[] | undefined = await getDictionary();
+		const dictionary: DictionaryEntry[] | undefined = await getDictionary();
 
 		if (dictionary !== undefined) {
 			createRoot(document.getElementById("root")!).render(

@@ -1,16 +1,16 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 import { Modal } from "@/components";
 import { useQuestion } from "@/hooks";
-import { DictionaryItem } from "@/types";
+import { DictionaryEntry } from "@/types";
 
 type QuestionProps = {
-	dictionary: DictionaryItem[];
-	updateWordAttemptHistory: (args: { wordId: DictionaryItem["id"]; correct: boolean }) => void;
+	dictionary: DictionaryEntry[];
+	updateAttemptHistoryItem: (args: { dictionaryEntryId: DictionaryEntry["id"]; correct: boolean }) => void;
 };
 
 type QuestionStatus = "neutral" | "success" | "failure";
 
-export function Question({ dictionary, updateWordAttemptHistory }: QuestionProps) {
+export function Question({ dictionary, updateAttemptHistoryItem }: QuestionProps) {
 	const [inputValue, setInputValue] = useState<string>("");
 	const [status, setStatus] = useState<QuestionStatus>("neutral");
 
@@ -46,7 +46,7 @@ export function Question({ dictionary, updateWordAttemptHistory }: QuestionProps
 	}
 
 	function handleOutcome(correct: boolean) {
-		updateWordAttemptHistory({ wordId: question.correctAnswer.id, correct: correct });
+		updateAttemptHistoryItem({ dictionaryEntryId: question.correctAnswer.id, correct: correct });
 		setStatus(correct ? "success" : "failure");
 	}
 
@@ -96,7 +96,7 @@ export function Question({ dictionary, updateWordAttemptHistory }: QuestionProps
 						</h2>
 						<p className="text-center font-bold">select the correct translation from the options below.</p>
 						<div className="flex flex-col items-stretch gap-4">
-							{question.options.map((option: DictionaryItem) => (
+							{question.options.map((option: DictionaryEntry) => (
 								<button
 									className="flex min-w-48 items-center justify-center border-2 border-orange-100 bg-neutral-950 p-2 text-2xl text-orange-100 hover:border-orange-500 hover:text-orange-500"
 									key={option.id}

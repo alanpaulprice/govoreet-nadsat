@@ -1,4 +1,4 @@
-export type DictionaryItem = {
+export type DictionaryEntry = {
 	id: string;
 	nadsat: string;
 	english: string;

@@ -1,35 +1,43 @@
-import { DictionaryItem } from "@/types";
+import { DictionaryEntry } from "@/types";
 import { Checkbox, Modal } from "@/components";
 import { useLocalStorage } from "@/hooks";
 
 type DictionaryProps = {
 	open: boolean;
 	onClose: () => void;
-	dictionary: DictionaryItem[];
-	favoriteWords: Array<DictionaryItem["id"]>;
-	setFavoriteWords: (value: Array<DictionaryItem["id"]>) => void;
+	dictionary: DictionaryEntry[];
+	favoriteDictionaryEntries: Array<DictionaryEntry["id"]>;
+	setFavoriteDictionaryEntries: (value: Array<DictionaryEntry["id"]>) => void;
 };
 
-export function Dictionary({ open, onClose, dictionary, favoriteWords, setFavoriteWords }: DictionaryProps) {
-	const [favoriteWordsFilterActive, setFavoriteWordsFilterActive] = useLocalStorage<boolean>(
-		"favoriteWordsFilterActive",
+export function Dictionary({
+	open,
+	onClose,
+	dictionary,
+	favoriteDictionaryEntries,
+	setFavoriteDictionaryEntries,
+}: DictionaryProps) {
+	const [favoriteDictionaryEntriesFilterActive, setFavoriteDictionaryEntriesFilterActive] = useLocalStorage<boolean>(
+		"favoriteDictionaryEntriesFilterActive",
 		false
 	);
 
 	function onFilterCheckboxClick() {
-		setFavoriteWordsFilterActive(!favoriteWordsFilterActive);
+		setFavoriteDictionaryEntriesFilterActive(!favoriteDictionaryEntriesFilterActive);
 	}
 
-	function onFavoriteCheckboxClick(id: DictionaryItem["id"]) {
-		let newFavoriteWords = [...favoriteWords];
+	function onFavoriteCheckboxClick(id: DictionaryEntry["id"]) {
+		let newFavoriteDictionaryEntries = [...favoriteDictionaryEntries];
 
-		if (favoriteWords.includes(id)) {
-			newFavoriteWords = newFavoriteWords.filter((favoriteWord: DictionaryItem["id"]) => favoriteWord !== id);
+		if (favoriteDictionaryEntries.includes(id)) {
+			newFavoriteDictionaryEntries = newFavoriteDictionaryEntries.filter(
+				(dictionaryEntryId: DictionaryEntry["id"]) => dictionaryEntryId !== id
+			);
 		} else {
-			newFavoriteWords.push(id);
+			newFavoriteDictionaryEntries.push(id);
 		}
 
-		setFavoriteWords(newFavoriteWords);
+		setFavoriteDictionaryEntries(newFavoriteDictionaryEntries);
 	}
 
 	return (
@@ -38,32 +46,32 @@ export function Dictionary({ open, onClose, dictionary, favoriteWords, setFavori
 				id="filter"
 				name="filter"
 				label="favourites only"
-				checked={favoriteWordsFilterActive}
+				checked={favoriteDictionaryEntriesFilterActive}
 				onChange={onFilterCheckboxClick}
 			/>
 			<table className="text-orange-100">
 				<thead className="hidden">
 					<tr>
 						<th>favorite</th>
-						<th>word</th>
+						<th>nadsat</th>
 						<th>translation</th>
 					</tr>
 				</thead>
 				<tbody>
-					{dictionary.map(({ id, nadsat, english }: DictionaryItem) =>
-						favoriteWordsFilterActive === false || favoriteWords.includes(id) ? (
+					{dictionary.map(({ id, nadsat, english }: DictionaryEntry) =>
+						favoriteDictionaryEntriesFilterActive === false || favoriteDictionaryEntries.includes(id) ? (
 							<tr
 								key={id}
 								className={
 									"align-middle hover:underline" +
-									(favoriteWords.includes(id) ? " text-orange-500" : "")
+									(favoriteDictionaryEntries.includes(id) ? " text-orange-500" : "")
 								}
 							>
 								<td>
 									<Checkbox
 										{...{ id }}
 										name={id}
-										checked={favoriteWords.includes(id)}
+										checked={favoriteDictionaryEntries.includes(id)}
 										onChange={() => onFavoriteCheckboxClick(id)}
 									/>
 								</td>

@@ -1,8 +1,8 @@
-import { DictionaryItem } from ".";
+import { DictionaryEntry } from ".";
 import { QuestionType } from ".";
 
 export type Question = {
 	type: QuestionType;
-	correctAnswer: DictionaryItem;
-	options: DictionaryItem[];
+	correctAnswer: DictionaryEntry;
+	options: DictionaryEntry[];
 };

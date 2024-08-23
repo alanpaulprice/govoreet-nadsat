@@ -1,6 +1,6 @@
-import { DictionaryItem } from "../types";
+import { DictionaryEntry } from "../types";
 
-export async function getDictionary(): Promise<DictionaryItem[] | undefined> {
+export async function getDictionary(): Promise<DictionaryEntry[] | undefined> {
 	try {
 		const response = await fetch("dictionary.json");
 
@@ -8,7 +8,7 @@ export async function getDictionary(): Promise<DictionaryItem[] | undefined> {
 			throw new Error(`HTTP error. Status: ${response.status}`);
 		}
 
-		const data: DictionaryItem[] = await response.json();
+		const data: DictionaryEntry[] = await response.json();
 		return data;
 	} catch (error) {
 		console.error("Error encountered while loading dictionary.", error);

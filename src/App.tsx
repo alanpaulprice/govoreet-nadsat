@@ -1,45 +1,57 @@
 import { useState } from "react";
-import { DictionaryItem, WordAttemptHistoryItem } from "@/types";
+import { DictionaryEntry, DictionaryEntryAttemptHistoryItem } from "@/types";
 import { Dictionary, ScoreDisplay, Question } from "@/modules";
 import { useLocalStorage } from "@/hooks";
 import { ensure } from "@/utilities";
 
 type Props = {
-	dictionary: DictionaryItem[];
+	dictionary: DictionaryEntry[];
 };
 
 export function App({ dictionary }: Props) {
-	const [wordAttemptHistory, setWordAttemptHistory] = useLocalStorage<Array<WordAttemptHistoryItem>>(
-		"wordAttemptHistory",
+	const [attemptHistory, setAttemptHistory] = useLocalStorage<Array<DictionaryEntryAttemptHistoryItem>>(
+		"attemptHistory",
 		[]
 	);
 	const [dictionaryOpen, setDictionaryOpen] = useState<boolean>(false);
-	const [favoriteWords, setFavoriteWords] = useLocalStorage<Array<DictionaryItem["id"]>>("favoriteWords", []);
+	const [favoriteDictionaryEntries, setFavoriteDictionaryEntries] = useLocalStorage<Array<DictionaryEntry["id"]>>(
+		"favoriteDictionaryEntries",
+		[]
+	);
 
-	function updateWordAttemptHistory({ wordId, correct }: { wordId: DictionaryItem["id"]; correct: boolean }) {
-		const noWordWithIdExists = dictionary.find((element) => element.id === wordId) === undefined;
+	function updateAttemptHistoryItem({
+		dictionaryEntryId,
+		correct,
+	}: {
+		dictionaryEntryId: DictionaryEntry["id"];
+		correct: boolean;
+	}) {
+		const noDictionaryEntryWithIdExists =
+			dictionary.find((element) => element.id === dictionaryEntryId) === undefined;
 
-		if (noWordWithIdExists) {
+		if (noDictionaryEntryWithIdExists) {
 			//! MAYBE THROW ERROR HERE INSTEAD?
-			console.error(`updateWordAttemptHistory: No word with an ID of "${wordId} was found in the dictionary.`);
+			console.error(`updateAttemptHistoryItem: No dictionary entry with an ID of "${dictionaryEntryId} exists.`);
 			return;
 		}
 
-		setWordAttemptHistory((previousState) => {
+		setAttemptHistory((previousState) => {
 			const newState = [...previousState];
-			const historyItemIndex = newState.findIndex((element) => element.wordId === wordId);
+			const historyItemIndex = newState.findIndex((element) => element.dictionaryEntryId === dictionaryEntryId);
 
 			if (historyItemIndex === -1) {
 				newState.push({
-					wordId: wordId,
+					dictionaryEntryId: dictionaryEntryId,
 					attempts: 1,
 					correct: correct ? 1 : 0,
 				});
 			} else {
-				const previousHistoryItem = ensure<WordAttemptHistoryItem>(previousState.at(historyItemIndex));
+				const previousHistoryItem = ensure<DictionaryEntryAttemptHistoryItem>(
+					previousState.at(historyItemIndex)
+				);
 
 				newState[historyItemIndex] = {
-					wordId: previousHistoryItem.wordId,
+					dictionaryEntryId: previousHistoryItem.dictionaryEntryId,
 					attempts: previousHistoryItem.attempts + 1,
 					correct: previousHistoryItem.correct + (correct ? 1 : 0),
 				};
@@ -49,7 +61,7 @@ export function App({ dictionary }: Props) {
 		});
 	}
 
-	const score = wordAttemptHistory.reduce(
+	const score = attemptHistory.reduce(
 		(previous, current) => {
 			return {
 				attempts: previous.attempts + current.attempts,
@@ -74,12 +86,16 @@ export function App({ dictionary }: Props) {
 			</header>
 			<main className="mt-16 flex w-full max-w-3xl flex-col items-stretch gap-2 self-center">
 				<ScoreDisplay {...{ score }} />
-				<Question {...{ dictionary, updateWordAttemptHistory }} />
+				<Question {...{ dictionary, updateAttemptHistoryItem }} />
 			</main>
 			<Dictionary
 				open={dictionaryOpen}
 				onClose={() => setDictionaryOpen(false)}
-				{...{ dictionary, favoriteWords, setFavoriteWords }}
+				{...{
+					dictionary,
+					favoriteDictionaryEntries,
+					setFavoriteDictionaryEntries,
+				}}
 			/>
 		</div>
 	);

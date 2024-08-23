@@ -1,3 +1,3 @@
-import { DictionaryItem } from "./DictionaryItem";
+import { DictionaryEntry } from "./DictionaryEntry";
 
-export type Dictionary = DictionaryItem[];
+export type Dictionary = DictionaryEntry[];
