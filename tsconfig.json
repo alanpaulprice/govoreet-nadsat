@@ -19,12 +19,12 @@
 		"noFallthroughCasesInSwitch": true,
 		"baseUrl": ".",
 		"paths": {
-			"@components": ["./src/components"],
-			"@constants": ["./src/constants"],
-			"@hooks": ["./src/hooks"],
+			"@components": ["./src/common/components"],
+			"@constants": ["./src/common/constants"],
+			"@hooks": ["./src/common/hooks"],
 			"@modules": ["./src/modules"],
-			"@types": ["./src/types"],
-			"@utilities": ["./src/utilities"]
+			"@types": ["./src/common/types"],
+			"@utilities": ["./src/common/utilities"]
 		}
 	},
 	"include": ["src"],

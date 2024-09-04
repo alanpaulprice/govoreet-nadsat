@@ -2,9 +2,9 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import { App } from "./App.tsx";
+import { DictionaryEntry } from "./common/types/DictionaryEntry.ts";
+import { getDictionary } from "./common/utilities/index.ts";
 import "./index.css";
-import { DictionaryEntry } from "./types/DictionaryEntry.ts";
-import { getDictionary } from "./utilities";
 
 async function run() {
 	try {
