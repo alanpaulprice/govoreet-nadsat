@@ -1,7 +1,10 @@
 import { useState } from "react";
-import { Dictionary, Question, QuestionType } from "@/types";
-import { generateUniqueNumbers } from "@/utilities";
-import { NUMBER_OF_OPTIONS, QUESTION_TYPES } from "@/constants";
+
+import { NUMBER_OF_OPTIONS, QUESTION_TYPES } from "@constants";
+
+import { Dictionary, Question, QuestionType } from "@types";
+
+import { generateUniqueNumbers } from "@utilities";
 
 export function useQuestion(dictionary: Dictionary): [Question, () => Question] {
 	const [question, setQuestion] = useState<Question>(createQuestion(dictionary));

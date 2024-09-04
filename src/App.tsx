@@ -1,8 +1,12 @@
 import { useState } from "react";
-import { DictionaryEntry, DictionaryEntryAttemptHistoryItem } from "@/types";
-import { Dictionary, ScoreDisplay, Question } from "@/modules";
-import { useLocalStorage } from "@/hooks";
-import { ensure } from "@/utilities";
+
+import { useLocalStorage } from "@hooks";
+
+import { Dictionary, Question, ScoreDisplay } from "@modules";
+
+import { DictionaryEntry, DictionaryEntryAttemptHistoryItem } from "@types";
+
+import { ensure } from "@utilities";
 
 type Props = {
 	dictionary: DictionaryEntry[];

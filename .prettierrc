@@ -1,0 +1,42 @@
+{
+	"arrowParens": "always",
+	"bracketSameLine": false,
+	"bracketSpacing": true,
+	"embeddedLanguageFormatting": "auto",
+	"endOfLine": "lf",
+	"htmlWhitespaceSensitivity": "css",
+	"insertPragma": false,
+	"importOrder": [
+		"<THIRD_PARTY_MODULES>",
+		"^@components$",
+		"^@constants$",
+		"^@hooks$",
+		"^@modules$",
+		"^@types$",
+		"^@utilities$",
+		"^[./]"
+	],
+	"importOrderSeparation": true,
+	"importOrderSortSpecifiers": true,
+	"jsxSingleQuote": false,
+	"plugins": ["prettier-plugin-tailwindcss", "@trivago/prettier-plugin-sort-imports"],
+	"printWidth": 120,
+	"proseWrap": "always",
+	"quoteProps": "as-needed",
+	"requirePragma": false,
+	"semi": true,
+	"singleAttributePerLine": false,
+	"singleQuote": false,
+	"tabWidth": 4,
+	"trailingComma": "es5",
+	"useTabs": true,
+	"vueIndentScriptAndStyle": false,
+	"overrides": [
+		{
+			"files": "*.md",
+			"options": {
+				"printWidth": 100
+			}
+		}
+	]
+}

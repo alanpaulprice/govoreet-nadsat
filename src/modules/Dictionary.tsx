@@ -1,6 +1,8 @@
-import { DictionaryEntry } from "@/types";
-import { Checkbox, Modal } from "@/components";
-import { useLocalStorage } from "@/hooks";
+import { Checkbox, Modal } from "@components";
+
+import { useLocalStorage } from "@hooks";
+
+import { DictionaryEntry } from "@types";
 
 type DictionaryProps = {
 	open: boolean;

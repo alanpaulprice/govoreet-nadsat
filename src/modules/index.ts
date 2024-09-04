@@ -1,3 +1,3 @@
-export * from "./Dictionary"
-export * from "./Question"
-export * from "./ScoreDisplay"
+export * from "./Dictionary";
+export * from "./Question";
+export * from "./ScoreDisplay";
