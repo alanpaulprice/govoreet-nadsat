@@ -10,9 +10,16 @@ import { QuestionStatus } from "./types";
 type QuestionProps = {
 	dictionary: DictionaryEntry[];
 	updateAttemptHistoryItem: (args: { dictionaryEntryId: DictionaryEntry["id"]; correct: boolean }) => void;
+	favoriteDictionaryEntries: Array<DictionaryEntry["id"]>;
+	setFavoriteDictionaryEntries: (value: Array<DictionaryEntry["id"]>) => void;
 };
 
-export function Question({ dictionary, updateAttemptHistoryItem }: QuestionProps) {
+export function Question({
+	dictionary,
+	updateAttemptHistoryItem,
+	favoriteDictionaryEntries,
+	setFavoriteDictionaryEntries,
+}: QuestionProps) {
 	const [inputValue, setInputValue] = useState<string>("");
 	const [questionStatus, setQuestionStatus] = useState<QuestionStatus>("neutral");
 
@@ -73,7 +80,10 @@ export function Question({ dictionary, updateAttemptHistoryItem }: QuestionProps
 	return (
 		<>
 			{renderMainElements()}
-			<OutcomeModal onClose={onOutcomeModalClose} {...{ questionStatus, question }} />
+			<OutcomeModal
+				onClose={onOutcomeModalClose}
+				{...{ questionStatus, question, favoriteDictionaryEntries, setFavoriteDictionaryEntries }}
+			/>
 		</>
 	);
 }

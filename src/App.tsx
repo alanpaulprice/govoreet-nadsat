@@ -90,7 +90,14 @@ export function App({ dictionary }: Props) {
 			</header>
 			<main className="mt-16 flex w-full max-w-3xl flex-col items-stretch gap-2 self-center">
 				<ScoreDisplay {...{ score }} />
-				<Question {...{ dictionary, updateAttemptHistoryItem }} />
+				<Question
+					{...{
+						dictionary,
+						updateAttemptHistoryItem,
+						favoriteDictionaryEntries,
+						setFavoriteDictionaryEntries,
+					}}
+				/>
 			</main>
 			<Dictionary
 				open={dictionaryOpen}
