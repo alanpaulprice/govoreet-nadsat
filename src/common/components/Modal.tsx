@@ -22,9 +22,9 @@ export function Modal({ open, onClose, closeOnOverlayClick, title, children }: M
 				ref={overlayRef}
 				onClick={onOverlayClick}
 			>
-				<div className="relative flex max-h-svh flex-col gap-4 border-2 border-orange-100 bg-neutral-950">
+				<div className="relative flex max-h-svh flex-col gap-4 border-2 border-orange-100 bg-neutral-950 p-8">
 					<header className="flex items-start justify-between">
-						<h1 className="mx-4 mt-4 text-center text-3xl font-bold">{title}</h1>
+						<h1 className="text-center text-3xl font-bold">{title}</h1>
 						<button
 							className="mr-1 mt-1 flex items-center justify-center p-2 font-bold leading-3 text-orange-100 hover:text-orange-500"
 							type="button"
@@ -33,7 +33,7 @@ export function Modal({ open, onClose, closeOnOverlayClick, title, children }: M
 							close
 						</button>
 					</header>
-					<div className="mx-4 mb-4 flex flex-col gap-2">{children}</div>
+					<div className="flex flex-col gap-2">{children}</div>
 				</div>
 			</div>
 		);
