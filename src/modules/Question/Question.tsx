@@ -4,6 +4,7 @@ import { Modal } from "@components";
 
 import { DictionaryEntry } from "@types";
 
+import { InputQuestion, MultiChoiceQuestion } from "./components";
 import { useQuestion } from "./hooks";
 
 type QuestionProps = {
@@ -23,7 +24,7 @@ export function Question({ dictionary, updateAttemptHistoryItem }: QuestionProps
 		setInputValue(event.target.value);
 	}
 
-	function onFormSubmit(event: FormEvent) {
+	function onAnswerSubmit(event: FormEvent) {
 		event.preventDefault();
 		if (inputValue) handleAnswerSubmission(inputValue);
 	}
@@ -63,56 +64,11 @@ export function Question({ dictionary, updateAttemptHistoryItem }: QuestionProps
 		switch (question.type) {
 			case "INPUT_FROM_NADSAT":
 			case "INPUT_TO_NADSAT":
-				return (
-					<div className="flex flex-col gap-8 border-2 border-orange-100 p-8">
-						<h2 className="flex h-32 items-center justify-center border-2 border-orange-100 text-center text-6xl">
-							{question.type === "INPUT_FROM_NADSAT" && question.correctAnswer.nadsat}
-							{question.type === "INPUT_TO_NADSAT" && question.correctAnswer.english}
-						</h2>
-						<p className="text-center font-bold">enter the correct translation in the input below.</p>
-						<form className="flex flex-col items-stretch gap-4" onSubmit={onFormSubmit}>
-							<input
-								className="border border-orange-100 bg-transparent p-2 text-center text-2xl placeholder-orange-100 placeholder-opacity-50 focus-visible:outline focus-visible:outline-orange-100"
-								type="text"
-								value={inputValue}
-								onChange={onInputChange}
-								placeholder="enter your translation here."
-								autoFocus
-							/>
-							<button
-								className="flex min-w-48 items-center justify-center border-2 border-orange-100 bg-neutral-950 p-2 text-2xl text-orange-100 hover:border-orange-500 hover:text-orange-500 disabled:opacity-50"
-								disabled={!inputValue}
-							>
-								submit
-							</button>
-						</form>
-					</div>
-				);
+				return <InputQuestion {...{ question, inputValue, onInputChange, onAnswerSubmit }} />;
 
 			case "MULTI_CHOICE_FROM_NADSAT":
 			case "MULTI_CHOICE_TO_NADSAT":
-				return (
-					<div className="flex flex-col gap-8 border-2 border-orange-100 p-8">
-						<h2 className="flex h-32 items-center justify-center border-2 border-orange-100 text-center text-6xl">
-							{question.type === "MULTI_CHOICE_FROM_NADSAT" && question.correctAnswer.nadsat}
-							{question.type === "MULTI_CHOICE_TO_NADSAT" && question.correctAnswer.english}
-						</h2>
-						<p className="text-center font-bold">select the correct translation from the options below.</p>
-						<div className="flex flex-col items-stretch gap-4">
-							{question.options.map((option: DictionaryEntry) => (
-								<button
-									className="flex min-w-48 items-center justify-center border-2 border-orange-100 bg-neutral-950 p-2 text-2xl text-orange-100 hover:border-orange-500 hover:text-orange-500"
-									key={option.id}
-									type="button"
-									onClick={() => handleAnswerSubmission(option.id)}
-								>
-									{question.type === "MULTI_CHOICE_FROM_NADSAT" && option.english}
-									{question.type === "MULTI_CHOICE_TO_NADSAT" && option.nadsat}
-								</button>
-							))}
-						</div>
-					</div>
-				);
+				return <MultiChoiceQuestion {...{ question, handleAnswerSubmission }} />;
 		}
 	}
 
