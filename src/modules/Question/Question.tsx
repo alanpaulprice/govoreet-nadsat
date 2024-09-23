@@ -2,9 +2,9 @@ import { ChangeEvent, FormEvent, useState } from "react";
 
 import { Modal } from "@components";
 
-import { useQuestion } from "@hooks";
-
 import { DictionaryEntry } from "@types";
+
+import { useQuestion } from "./hooks";
 
 type QuestionProps = {
 	dictionary: DictionaryEntry[];

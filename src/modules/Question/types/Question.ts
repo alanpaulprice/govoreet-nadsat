@@ -1,5 +1,5 @@
-import { DictionaryEntry } from ".";
-import { QuestionType } from ".";
+import { DictionaryEntry } from "@types";
+import { QuestionType } from "./QuestionType";
 
 export type Question = {
 	type: QuestionType;

@@ -1,3 +1,3 @@
 export * from "./Dictionary";
-export * from "./Question";
+export * from "./Question/Question";
 export * from "./ScoreDisplay";
