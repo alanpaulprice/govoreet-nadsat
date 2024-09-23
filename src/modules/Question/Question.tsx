@@ -1,22 +1,20 @@
 import { ChangeEvent, FormEvent, useState } from "react";
 
-import { Modal } from "@components";
-
 import { DictionaryEntry } from "@types";
 
 import { InputQuestion, MultiChoiceQuestion } from "./components";
+import { OutcomeModal } from "./components/OutcomeModal";
 import { useQuestion } from "./hooks";
+import { QuestionStatus } from "./types";
 
 type QuestionProps = {
 	dictionary: DictionaryEntry[];
 	updateAttemptHistoryItem: (args: { dictionaryEntryId: DictionaryEntry["id"]; correct: boolean }) => void;
 };
 
-type QuestionStatus = "neutral" | "success" | "failure";
-
 export function Question({ dictionary, updateAttemptHistoryItem }: QuestionProps) {
 	const [inputValue, setInputValue] = useState<string>("");
-	const [status, setStatus] = useState<QuestionStatus>("neutral");
+	const [questionStatus, setQuestionStatus] = useState<QuestionStatus>("neutral");
 
 	const [question, nextQuestion] = useQuestion(dictionary);
 
@@ -51,13 +49,13 @@ export function Question({ dictionary, updateAttemptHistoryItem }: QuestionProps
 
 	function handleOutcome(correct: boolean) {
 		updateAttemptHistoryItem({ dictionaryEntryId: question.correctAnswer.id, correct: correct });
-		setStatus(correct ? "success" : "failure");
+		setQuestionStatus(correct ? "success" : "failure");
 	}
 
 	function onOutcomeModalClose() {
 		setInputValue("");
 		nextQuestion();
-		setStatus("neutral");
+		setQuestionStatus("neutral");
 	}
 
 	function renderMainElements() {
@@ -75,17 +73,7 @@ export function Question({ dictionary, updateAttemptHistoryItem }: QuestionProps
 	return (
 		<>
 			{renderMainElements()}
-			<Modal
-				open={status === "success" || status === "failure"}
-				onClose={onOutcomeModalClose}
-				title={status === "success" ? "correct" : "incorrect"}
-			>
-				<p className="max-w-prose">
-					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veniam maxime obcaecati maiores sit unde
-					eveniet quibusdam accusantium deserunt distinctio. Cupiditate veritatis libero aliquam dolorum
-					provident. Cum quisquam tenetur perspiciatis reprehenderit.
-				</p>
-			</Modal>
+			<OutcomeModal onClose={onOutcomeModalClose} {...{ questionStatus, question }} />
 		</>
 	);
 }
