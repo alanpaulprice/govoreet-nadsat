@@ -45,8 +45,9 @@ export function Dictionary({
 	return (
 		<Modal {...{ open, onClose }} title="dictionary">
 			<Checkbox
-				id="filter"
-				name="filter"
+				className="my-4"
+				id="favourites-only"
+				name="favourites-only"
 				label="favourites only"
 				checked={favoriteDictionaryEntriesFilterActive}
 				onChange={onFilterCheckboxClick}
