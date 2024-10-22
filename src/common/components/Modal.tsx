@@ -22,13 +22,18 @@ export function Modal({ open, onClose, closeOnOverlayClick, title, children }: M
 				ref={overlayRef}
 				onClick={onOverlayClick}
 			>
-				<div className="relative flex max-h-svh flex-col gap-4 border-2 border-orange-100 bg-neutral-950 p-8">
+				<div
+					className="relative flex max-h-svh flex-col gap-4 border-2 border-orange-100 bg-neutral-950 p-8"
+					aria-modal="true"
+					role="dialog"
+				>
 					<header className="flex items-start justify-between">
 						<h1 className="text-center text-3xl font-bold">{title}</h1>
 						<button
 							className="mr-1 mt-1 flex items-center justify-center p-2 font-bold leading-3 text-orange-100 hover:text-orange-500"
 							type="button"
 							onClick={onClose}
+							aria-label="Close modal"
 						>
 							close
 						</button>
