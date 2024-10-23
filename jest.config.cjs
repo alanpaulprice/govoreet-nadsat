@@ -6,5 +6,6 @@ module.exports = {
 	moduleFileExtensions: ["js", "jsx", "ts", "tsx", "json", "node"],
 	moduleNameMapper: {
 		"^@constants$": "<rootDir>/src/common/constants",
+		"^@types$": "<rootDir>/src/common/types",
 	},
 };
