@@ -4,4 +4,7 @@ module.exports = {
 	},
 	testEnvironment: "jsdom",
 	moduleFileExtensions: ["js", "jsx", "ts", "tsx", "json", "node"],
+	moduleNameMapper: {
+		"^@constants$": "<rootDir>/src/common/constants",
+	},
 };
