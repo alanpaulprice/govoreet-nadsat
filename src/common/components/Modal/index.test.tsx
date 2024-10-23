@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { fireEvent, render, screen } from "@testing-library/react";
 
-import { Modal } from "./Modal";
+import { Modal } from ".";
 
 describe("Modal", () => {
 	it("should not be rendered when the `open` property is `false`.", () => {

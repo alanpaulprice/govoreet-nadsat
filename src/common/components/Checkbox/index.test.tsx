@@ -1,7 +1,7 @@
 import "@testing-library/jest-dom";
 import { fireEvent, render, screen } from "@testing-library/react";
 
-import { Checkbox } from "./Checkbox";
+import { Checkbox } from ".";
 
 describe("Checkbox", () => {
 	it("should call the function provided to the `onChange` property when clicked.", () => {

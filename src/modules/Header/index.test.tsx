@@ -3,7 +3,7 @@ import { fireEvent, render, screen } from "@testing-library/react";
 
 import { APP_NAME } from "@constants";
 
-import { Header } from "./Header";
+import { Header } from ".";
 
 describe("Header", () => {
 	it("should display the application's logo as an SVG element.", () => {
