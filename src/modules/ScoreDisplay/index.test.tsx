@@ -6,7 +6,7 @@ import { Score } from "@types";
 
 import { ScoreDisplay } from ".";
 
-describe("Score Display", () => {
+describe("ScoreDisplay", () => {
 	it("should display the text '{correct} out of {attempts}' based on the properties provided.", () => {
 		const score = {
 			attempts: 5,
