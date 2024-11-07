@@ -76,7 +76,7 @@ export function App({ dictionary }: Props) {
 	);
 
 	return (
-		<div className="flex min-h-screen flex-col bg-neutral-950 font-mono text-orange-100">
+		<div className="flex min-h-screen flex-col bg-neutral-900 font-mono text-orange-100">
 			<Header onDictionaryButtonClick={() => setDictionaryOpen(true)} />
 			<main className="mt-16 flex w-full max-w-3xl flex-col items-stretch gap-2 self-center">
 				<ScoreDisplay {...{ score }} />

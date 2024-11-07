@@ -6,7 +6,7 @@ type HeaderProps = {
 
 export function Header({ onDictionaryButtonClick }: HeaderProps) {
 	return (
-		<header className="flex items-center justify-between border-b-2 border-orange-100 p-4">
+		<header className="flex items-center justify-between border-b-2 border-orange-800 p-4">
 			<span className="flex items-center gap-4">
 				<svg
 					className="fill-current"

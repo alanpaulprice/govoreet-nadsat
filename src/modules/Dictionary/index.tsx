@@ -45,7 +45,7 @@ export function Dictionary({
 	return (
 		<Modal {...{ open, onClose }} title="dictionary">
 			<Checkbox
-				className="my-4"
+				className={"my-4" + (favoriteDictionaryEntriesFilterActive ? " text-orange-700" : "")}
 				id="favourites-only"
 				name="favourites-only"
 				label="favourites only"
@@ -66,8 +66,7 @@ export function Dictionary({
 							<tr
 								key={id}
 								className={
-									"align-middle hover:underline" +
-									(favoriteDictionaryEntries.includes(id) ? " text-orange-500" : "")
+									"align-middle" + (favoriteDictionaryEntries.includes(id) ? " text-orange-700" : "")
 								}
 							>
 								<td>
