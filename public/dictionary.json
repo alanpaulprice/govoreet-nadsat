@@ -1,8 +1,8 @@
 [
 	{
 		"id": "ea3a8d5c-207a-47ce-b49e-afadcea57852",
-		"nadsat": "appy polly loggies",
-		"english": "apologies",
+		"nadsat": "appy polly loggie",
+		"english": "apology",
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -40,7 +40,7 @@
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "2e2c001b-6518-4018-bc8e-fba0b8380021",
 		"nadsat": "barry place",
 		"english": "prison",
 		"origin": "",
@@ -48,15 +48,15 @@
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "9559756d-3460-429f-b6dd-372f19ea34e6",
 		"nadsat": "bezoomny",
-		"english": "crazy",
+		"english": ["crazy", "mad", "insane"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "a50c29e8-5e07-4bbe-8e8d-5455fb3e5fbc",
 		"nadsat": "biblio",
 		"english": "library",
 		"origin": "",
@@ -64,7 +64,15 @@
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "29de685b-b773-4cda-a4f1-ae5b41101ce1",
+		"nadsat": "bitva",
+		"english": "battle",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "49363285-99a3-4f80-a74d-91ace1b165a9",
 		"nadsat": "bog",
 		"english": "god",
 		"origin": "",
@@ -72,7 +80,15 @@
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "d6d004e8-12f8-4319-b3de-ea5eee750eab",
+		"nadsat": "bolnoy",
+		"english": "sick",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "f775b517-a9d5-4a68-a719-2bf87c9ee2ab",
 		"nadsat": "bolshy",
 		"english": "big",
 		"origin": "",
@@ -80,31 +96,23 @@
 		"example": ""
 	},
 	{
-		"id": "",
-		"nadsat": "brat",
+		"id": "49c8fd39-bca0-4b0e-880e-231cd0826bc1",
+		"nadsat": ["brat", "bratty"],
 		"english": "brother",
 		"origin": "",
 		"chapters": [],
 		"example": ""
 	},
 	{
-		"id": "",
-		"nadsat": "bratchny",
+		"id": "94a6dc88-620a-4bc8-b573-0c4660bcf044",
+		"nadsat": ["bratchny", "sod"],
 		"english": "bastard",
 		"origin": "",
 		"chapters": [],
 		"example": ""
 	},
 	{
-		"id": "",
-		"nadsat": "bratty",
-		"english": "brother",
-		"origin": "",
-		"chapters": [],
-		"example": ""
-	},
-	{
-		"id": "",
+		"id": "d18374bf-8518-4e35-9d20-64666efbb0bf",
 		"nadsat": "britva",
 		"english": "razor",
 		"origin": "",
@@ -112,7 +120,7 @@
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "87a7396a-ad0f-4a06-ab31-eefc53163694",
 		"nadsat": "brooko",
 		"english": "belly",
 		"origin": "",
@@ -120,7 +128,31 @@
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "b9742c50-57d2-44ad-91e0-1548036343c0",
+		"nadsat": "brosat",
+		"english": "threw",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "093e0b53-c5fb-4e26-9f6f-e6e3d4d5295f",
+		"nadsat": "brosay",
+		"english": "throw",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "777c7fe0-f600-49d1-aedc-36bbbb016610",
+		"nadsat": "bugatty",
+		"english": "rich",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "0714d84d-d072-4083-b5f5-4e3f3035ea2e",
 		"nadsat": "cal",
 		"english": "excrement; bad, awful, or worthless",
 		"origin": "",
@@ -128,7 +160,15 @@
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "5c6c2fbe-4c5f-4626-9856-45846560a4d4",
+		"nadsat": "cancer",
+		"english": "cigarette",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "6f8aa96d-4e3b-4d59-b1d2-9e1923ae9fff",
 		"nadsat": "cantora",
 		"english": "office",
 		"origin": "",
@@ -136,7 +176,7 @@
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "cfc882a0-31a6-450a-b93f-38912db023ef",
 		"nadsat": "carman",
 		"english": "pocket",
 		"origin": "",
@@ -144,7 +184,31 @@
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "4edb3eda-a0d6-4da2-8505-4fafb76b4af1",
+		"nadsat": "chai",
+		"english": "tea",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "fb787ff1-9096-4f2b-8010-6d9b44531b59",
+		"nadsat": ["charles", "charlie", "godman"],
+		"english": ["chaplin", "priest"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "3da0252d-aa6c-4d31-9008-256967cf91be",
+		"nadsat": ["chasha", "tass"],
+		"english": "cup",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "e702316e-07f8-4b8d-9609-b3e85da19042",
 		"nadsat": "chasso",
 		"english": "guard",
 		"origin": "",
@@ -152,15 +216,23 @@
 		"example": ""
 	},
 	{
-		"id": "",
-		"nadsat": "chelloveck",
-		"english": "man",
+		"id": "c3eac5cb-db89-408c-bfdc-71b22ff62f21",
+		"nadsat": "cheest",
+		"english": "wash",
 		"origin": "",
 		"chapters": [],
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "b109e0ef-554b-42fb-af4e-c893d87cb266",
+		"nadsat": ["chelloveck", "veck", "moodge", "orange"],
+		"english": ["man", "gentleman", "person", "fellow"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "ad2f777f-830c-40b8-a038-7631b660f05d",
 		"nadsat": "chepooka",
 		"english": "nonsense",
 		"origin": "",
@@ -168,31 +240,103 @@
 		"example": ""
 	},
 	{
-		"id": "",
-		"nadsat": "cutter",
+		"id": "b080dd6e-0de9-4a75-981c-e9594c032774",
+		"nadsat": "choodessny",
+		"english": "wonderful",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "490d60ff-2d66-41f5-88fc-ae5622529794",
+		"nadsat": "chumble",
+		"english": "mumble",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "8589c597-b12d-486e-96cb-4f1dcc59da0d",
+		"nadsat": "clop",
+		"english": "knock",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "2fd59e17-4057-44c1-896a-bcd73c19dbaa",
+		"nadsat": "cluve",
+		"english": "beak",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "6bd21592-5364-4932-9e36-3167c3075cbc",
+		"nadsat": "collocol",
+		"english": "bell",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "c814bf2b-c116-4b66-9b8a-e396c58ef8fc",
+		"nadsat": "crark",
+		"english": ["howl", "yowl"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "754072e0-4698-4aca-b3dd-dacaa151fa67",
+		"nadsat": "crast",
+		"english": "steal",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "2e6d9009-3cb1-40b6-8db6-cc3d5dd339bd",
+		"nadsat": "creech",
+		"english": "scream",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "28b6eeee-f665-4fe0-8dca-8aeee0e1223c",
+		"nadsat": ["cutter", "deng", "pretty polly"],
 		"english": "money",
 		"origin": "",
 		"chapters": [],
 		"example": ""
 	},
 	{
-		"id": "",
-		"nadsat": "deng",
-		"english": "money, teeth",
+		"id": "136c885f-9a13-499f-890b-909713cb1470",
+		"nadsat": "ded",
+		"english": "old man",
 		"origin": "",
 		"chapters": [],
 		"example": ""
 	},
 	{
-		"id": "",
-		"nadsat": "devotchka",
-		"english": "girl, young woman",
+		"id": "bfad02ba-e917-45d3-8368-0591bf45aca5",
+		"nadsat": ["devotchka", "ptitsa", "forella", "lighter", "dama", "soomka", "zheena", "cheena", "sharp"],
+		"english": ["woman", "girl"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "39742396-389c-4966-a3f8-e2d2a0e5e2f4",
+		"nadsat": "dobby",
+		"english": "good",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "65a24709-acd9-4164-a802-224a5e7ecb5c",
 		"nadsat": "domy",
 		"english": "house",
 		"origin": "",
@@ -200,7 +344,7 @@
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "2a2784a3-a357-4a85-9ddd-90733a31cfe4",
 		"nadsat": "dorogoy",
 		"english": "valuable",
 		"origin": "",
@@ -208,17 +352,1361 @@
 		"example": ""
 	},
 	{
-		"id": "",
-		"nadsat": "dratsing",
-		"english": "fighting",
+		"id": "14cf9b00-1596-4a00-96e6-995ea39a6c8f",
+		"nadsat": "drats",
+		"english": "fight",
 		"origin": "",
 		"chapters": [],
 		"example": ""
 	},
 	{
-		"id": "",
+		"id": "4808b418-9345-4495-9989-d8562c73ddf5",
 		"nadsat": "droog",
 		"english": "friend",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "3d130024-2520-4f76-87ee-01f8971f1ed8",
+		"nadsat": "dva",
+		"english": "two",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "6cc970ca-a52f-4bf0-96f0-a7cd51af114c",
+		"nadsat": "eegra",
+		"english": "game",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "d1f1abed-a5e3-4f70-a225-3b1e15d7c134",
+		"nadsat": "eemya",
+		"english": "name",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "cd7ad2f2-7cab-494d-8bbb-f7c0b6d5e23e",
+		"nadsat": "eggiweg",
+		"english": "egg",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "5cd2d981-2263-47f3-84bd-b14c5fd1b775",
+		"nadsat": "em",
+		"english": "mother",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "cd70e478-7587-4643-8b5c-76a0ad7beeff",
+		"nadsat": "fagged",
+		"english": "tired",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "41bbe08e-e753-4966-8d57-850ed31f735f",
+		"nadsat": "filly",
+		"english": "play",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "3aa74194-feb2-415d-90bb-0a5d3705d317",
+		"nadsat": "gazetta",
+		"english": "newspaper",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "b90d8805-e153-4d94-bd6d-ad36c4f40509",
+		"nadsat": "glaz",
+		"english": "eye",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "ea87ddf7-6623-492f-8076-6136c73eae7e",
+		"nadsat": "gloopy",
+		"english": "stupid",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "624a8f67-d665-4b0b-9a67-374cb07bba1f",
+		"nadsat": "golly",
+		"english": "unit of money",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "dcc80c46-c02e-45b5-9e55-e6d7e1418db0",
+		"nadsat": "goloss",
+		"english": "voice",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "5e149e61-143e-402f-9c12-76fbdaed07c0",
+		"nadsat": "goober",
+		"english": "mouth",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "8aa7ea4a-6c59-4b45-8871-8593a68ff40f",
+		"nadsat": ["gooly", "itty"],
+		"english": "go",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "cdfbd2f4-b175-40df-9669-39d999768e08",
+		"nadsat": "gorlo",
+		"english": "throat",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "8e576be1-2840-45a4-835f-b7c4ffbadde2",
+		"nadsat": "govoreet",
+		"english": ["talk", "speak"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "5ede7115-d1b6-434f-8722-e0a841594c80",
+		"nadsat": "grahzny",
+		"english": "dirty",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "86075b18-10be-4d6d-87da-95930a001929",
+		"nadsat": "grazzy",
+		"english": "soiled",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "1f06cad5-e09c-4862-a927-70cef664a005",
+		"nadsat": ["gromky", "shoomny"],
+		"english": ["loud", "noisy"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "de43ef7a-05c4-4e39-95aa-ea2688ff3a50",
+		"nadsat": "groody",
+		"english": "breast",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "9f52fe22-7061-4e19-ad9a-6064aeded815",
+		"nadsat": "gruppa",
+		"english": "group",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "571d78dc-089f-440d-9fd0-f231091a2635",
+		"nadsat": ["guff", "smeck"],
+		"english": "laugh",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "39c64d84-c81e-459b-b3e7-597c60a6affe",
+		"nadsat": "gulliver",
+		"english": "head",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "66befebe-4d49-4000-ac96-145d4f380b3e",
+		"nadsat": "guttiwuts",
+		"english": ["guts", "stomach"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "919202b7-6202-44a7-ac55-ed88140b9b3b",
+		"nadsat": "hen-korm",
+		"english": ["chickenfeed", "insignificant"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "005b4834-16f6-4263-b93a-a9d72fd0fd5d",
+		"nadsat": "horn",
+		"english": "cry out",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "f4f5c375-1acd-44b1-a5c8-da952ce7f962",
+		"nadsat": "horrorshow",
+		"english": ["good", "well"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "e327dd24-5c09-457a-97c7-f19b1e18bfd7",
+		"nadsat": "hound-and-horny",
+		"english": "corny",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "0373fee6-6368-42a0-9837-786357865af1",
+		"nadsat": "in-out-in-out",
+		"english": "sex",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "9f7bc494-838e-4b91-b26f-93189d3570fd",
+		"nadsat": "interessovat",
+		"english": "interest",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "3e4b4ed1-119b-4301-91ac-ffdd981aca48",
+		"nadsat": "jammiwam",
+		"english": "jam",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "ac2dfa50-d297-4531-8820-f44a8ce61fee",
+		"nadsat": "jeezny",
+		"english": "life",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "7deca5e0-827b-4613-91b0-6570653fc5c7",
+		"nadsat": "kartoffel",
+		"english": "potato",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "d280338c-e053-4a13-8e60-5fd8973cf65c",
+		"nadsat": "kleb",
+		"english": "bread",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "6fb29c6c-6289-4ca0-a22d-804b15e36bea",
+		"nadsat": "klootch",
+		"english": "key",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "9a7d38b4-f97d-4239-a594-20f955914b20",
+		"nadsat": "knopka",
+		"english": "button",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "6e6121a8-ac15-4ce0-a54b-6a428d3c5f15",
+		"nadsat": ["kopat", "pony"],
+		"english": ["get", "understand", "dig"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "73818932-1b2d-4530-9af8-c404eec0103b",
+		"nadsat": "koshka",
+		"english": "female cat",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "355fcc0f-0071-4340-b0e4-5b2314894899",
+		"nadsat": "kot",
+		"english": "tomcat",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "92bd9af5-86ba-4dc7-be02-171fc60af205",
+		"nadsat": "krovvy",
+		"english": "blood",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "b532e6ea-7374-43d7-85c8-7febf85d35df",
+		"nadsat": "kupet",
+		"english": "buy",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "cdd528c2-dabd-4687-b8c1-6f5e24756d1e",
+		"nadsat": "lapa",
+		"english": "paw",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "e91c7966-d26e-4013-97d9-a5ed76d78b0a",
+		"nadsat": "lewdies",
+		"english": "people",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "99b9cf03-82f8-4056-9d0e-b65fab6a465c",
+		"nadsat": "litso",
+		"english": "face",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "ebd519fe-275d-42c8-9393-855b0a0ac742",
+		"nadsat": ["lomtick", "shive"],
+		"english": ["slice", "piece", "cut"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "ecd13108-9729-4008-9191-426189baadda",
+		"nadsat": "lovet",
+		"english": "catch",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "0d75c5fe-a4d4-4ea4-94fe-1170d979f676",
+		"nadsat": "lubbilub",
+		"english": "make love",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "88a87537-e4dd-4530-8aa0-6d2a11bac9b0",
+		"nadsat": ["luscious glory", "voloss"],
+		"english": "hair",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "5b4c107d-6c17-4f88-9268-80af313bf157",
+		"nadsat": "malchick",
+		"english": "boy",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "f9922f8c-7fb6-4453-8aa1-adfd966b7c9d",
+		"nadsat": "malenky",
+		"english": "little",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "4efc64fa-39e6-47a7-b7be-447f19df01f5",
+		"nadsat": "maslo",
+		"english": "butter",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "8f53de6b-0623-4f94-bca9-d602b7c5e1d8",
+		"nadsat": "merzky",
+		"english": "filthy",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "b5ae343e-e6d4-42fc-9338-2f8589614147",
+		"nadsat": "messel",
+		"english": ["thought", "idea"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "e560992a-25a3-473b-973d-4a1b0d99c57d",
+		"nadsat": "mesto",
+		"english": "place",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "09171f55-fe95-4ff2-a293-8ac1401df04e",
+		"nadsat": ["millicent", "rozz"],
+		"english": "police officer",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "4ca40bac-a97f-420e-8994-d994937975d0",
+		"nadsat": "minoota",
+		"english": "minute",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "ed2e0d8a-ebe8-4979-a8ef-37b9bf1da98c",
+		"nadsat": "molodoy",
+		"english": "young",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "4eb524f6-7153-499c-aa7f-e65902f889aa",
+		"nadsat": "moloko",
+		"english": "milk",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "881b4570-714c-4caa-874f-92d4d7c14527",
+		"nadsat": "morder",
+		"english": "snout",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "de88b97a-fe53-4ac1-8e22-688b88ccdc9b",
+		"nadsat": "mounch",
+		"english": "snack",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "b5cdb497-184a-49a5-9e4c-bb1df8df631b",
+		"nadsat": "mozg",
+		"english": "brain",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "a444c2b8-1793-4c30-949d-b3d307f2fcd8",
+		"nadsat": "nachinat",
+		"english": "begin",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "f93a9516-1bb0-4098-8b87-b1be4e45a196",
+		"nadsat": "nadmenny",
+		"english": "arrogant",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "4fe1c622-fe31-4d41-b144-f5c039dd2100",
+		"nadsat": "nadsat",
+		"english": "teenage",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "907004a0-7d31-4450-8c42-19cd65d342d8",
+		"nadsat": "nagoy",
+		"english": "naked",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "888cb27d-907f-443c-a06b-e01bc5664eeb",
+		"nadsat": "nazz",
+		"english": "fool",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "5d3ec05c-b80c-4a42-8480-937ec58f2cb9",
+		"nadsat": "neezhnies",
+		"english": "underpants",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "6045950e-b7d1-44b1-82da-be68922d1d02",
+		"nadsat": "nochy",
+		"english": "night",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "47790398-c382-4a1a-a20a-68c61315d6e1",
+		"nadsat": "noga",
+		"english": ["foot", "leg"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "d3cb20e4-8045-4b8d-904c-e029f1235f76",
+		"nadsat": "nozh",
+		"english": "knife",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "0851664f-f82a-4e03-b78b-4135359c4141",
+		"nadsat": "nuk",
+		"english": "smell",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "0d27323b-9c79-4dfa-8244-d55fcc48bfa7",
+		"nadsat": "oddy knocky",
+		"english": "lonesome",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "4aa33121-d0ea-44b0-8dc2-6eb34052aec1",
+		"nadsat": "odin",
+		"english": "one",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "0d82cba3-2493-4afb-9a3d-877551f9a51e",
+		"nadsat": "okno",
+		"english": "window",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "f0a40503-7a78-4682-a562-79ed143888ed",
+		"nadsat": "oobivat",
+		"english": "kill",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "24cad01c-5d69-4898-933c-e27f7b724294",
+		"nadsat": "ookadeet",
+		"english": "leave",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "08eee19e-0b87-4da0-80ca-93964869f140",
+		"nadsat": "ooko",
+		"english": "ear",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "5a63259c-36d8-43f5-82bc-e7b310e36e6e",
+		"nadsat": "oomny",
+		"english": "clever",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "2834eee6-c371-4a73-8cc8-74cd89698366",
+		"nadsat": "oozy",
+		"english": "chain",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "be05cbb8-d408-4c42-b609-12da9db75511",
+		"nadsat": "osoosh",
+		"english": "wipe",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "757bd6b7-defd-4182-9c4e-7cfc4ef09a2a",
+		"nadsat": "otchkies",
+		"english": "eyeglasses",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "42257849-81b0-4fd8-ae88-3137844080b8",
+		"nadsat": "pan-handled",
+		"english": "erect",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "87ca4c4a-09c0-46dc-8bb1-74bb9953c625",
+		"nadsat": "pee",
+		"english": "father",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "8deb1050-5043-45fb-a1c4-aa8efba4afe7",
+		"nadsat": "peet",
+		"english": "drink",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "a8bda5b2-1789-41e1-a1ea-034f77e20508",
+		"nadsat": "pillow",
+		"english": "podooshka",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "500b39ad-16c1-4724-a67e-d3015ddc37c1",
+		"nadsat": "pishcha",
+		"english": "food",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "c4085a22-8b7e-4c00-8819-4ea2f70aefab",
+		"nadsat": "platch",
+		"english": "cry",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "0775bb31-cbb6-47b8-b931-b766629accc6",
+		"nadsat": "platties",
+		"english": "clothes",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "9628f7d6-f25e-46cc-ac8f-f80eb3f0f0c1",
+		"nadsat": "plenny",
+		"english": "prisoner",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "7ca59311-ed42-479e-95a0-9c7390b42a6a",
+		"nadsat": "plesk",
+		"english": "splash",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "430a3983-5774-4a77-b0c6-f8db7a27c65d",
+		"nadsat": "pletcho",
+		"english": "shoulder",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "3b1e7530-acd4-4a14-b88f-b7d64d23f360",
+		"nadsat": "plott",
+		"english": ["flesh", "body"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "3b6938b7-bc63-483d-9908-d9a7c474cc22",
+		"nadsat": "pol",
+		"english": "sex",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "dae4f66c-50ac-44d2-90ac-82ff702b707d",
+		"nadsat": "polezny",
+		"english": "useful",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "d7cd2360-2391-4f99-ad32-e209a6b1c97a",
+		"nadsat": "polyclef",
+		"english": "skeleton key",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "0c172855-90f8-401d-92cf-31a3bb25fc12",
+		"nadsat": ["poogly", "spoogy"],
+		"english": ["frightened", "scared", "terrified"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "f1a36746-297f-4478-b6b4-fbe6adc1915d",
+		"nadsat": "pooshka",
+		"english": "gun",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "1ea35916-4a4d-474c-bc85-316c9a04642f",
+		"nadsat": ["pop-disc", "popdisc"],
+		"english": "pop music disc",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "d7f8a071-4a27-41a0-9b2a-60e59b031656",
+		"nadsat": "prestoopnick",
+		"english": "criminal",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "466303d0-91c3-4a93-9567-d279f1f1b8e9",
+		"nadsat": "privodeet",
+		"english": "lead",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "86109285-d9c3-4c89-96a4-b3b6f1c76f3e",
+		"nadsat": "prod",
+		"english": "produce",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "a03a6c30-fca7-453f-bea1-3f1759e5a160",
+		"nadsat": "pyahnitsa",
+		"english": "drunk",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "f937875e-80c6-433c-a600-b40d40ccaa4c",
+		"nadsat": "rabbit",
+		"english": "work",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "f46a7151-ab2f-4d18-a9b2-4616f15aabc5",
+		"nadsat": "radosty",
+		"english": "joy",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "73168de0-6ca9-4ac2-abb3-9144e2a55cd7",
+		"nadsat": "raskazz",
+		"english": "story",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "e1219812-2f97-4675-aa00-dc4c7860236d",
+		"nadsat": "rasoodock",
+		"english": "mind",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "7433fcd5-66cd-40dd-b8d8-51d592f8eeb7",
+		"nadsat": "rassoodock",
+		"english": "mind",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "64e34d54-795f-49e9-9b80-ea36a87e6cab",
+		"nadsat": "raz",
+		"english": "time",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "ce07ccf7-15f8-4bf2-932e-6609717a1f74",
+		"nadsat": "razdraz",
+		"english": "upset",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "4f90e062-af85-404b-8497-658d39e0f9d4",
+		"nadsat": "razrez",
+		"english": ["rip", "tear"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "ce37605c-2412-4f6f-98d5-c10839cef342",
+		"nadsat": "rooker",
+		"english": "hand",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "1c7abbef-03e5-49d9-9711-ab968b11431a",
+		"nadsat": "rot",
+		"english": "mouth",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "03ade563-5056-4ba0-ba27-66e3f37ab9e0",
+		"nadsat": "sabog",
+		"english": "shoe",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "0ef014bb-74f3-448d-9fa8-f8a095f13b0d",
+		"nadsat": "sakar",
+		"english": "sugar",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "8596ad6a-447d-4640-9b67-becabd15f70c",
+		"nadsat": "sammy",
+		"english": "generous",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "4c057bb5-e2f4-4843-8623-6bd16265a52e",
+		"nadsat": "sarky",
+		"english": "sarcastic",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "ed182b02-0fa4-44c9-bfea-c716d85d6798",
+		"nadsat": "scoteena",
+		"english": "cow",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "dbb840a6-7c7b-40bc-a793-844b32c6c3fb",
+		"nadsat": "shaika",
+		"english": "gang",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "68a5810c-8529-4e96-bbd2-146249cf9e3d",
+		"nadsat": ["sharries", "yarbles"],
+		"english": ["balls", "testicles"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "49d4fed8-20b2-45d4-9171-b51a1c8e1994",
+		"nadsat": "shest",
+		"english": "barrier",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "fde02580-e1da-48e3-8416-386f63e4ec7c",
+		"nadsat": "shilarny",
+		"english": "concern",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "eed79b4f-b841-4f9e-a96e-12a473981a8a",
+		"nadsat": "shiyah",
+		"english": "neck",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "c526a2db-7266-469f-a558-a5697f820a5b",
+		"nadsat": "shlaga",
+		"english": ["club", "bat", "cudgel"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "a811ca30-59a8-48c8-80ca-a75e9466e61c",
+		"nadsat": "shlapa",
+		"english": "hat",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "bbb6ee61-4170-470f-a25b-286c8d82b751",
+		"nadsat": "shlem",
+		"english": "helmet",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "961d99aa-5ec8-40e0-8d73-ed5669c763af",
+		"nadsat": "shoot",
+		"english": "fool",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "7f8f81b1-903e-4519-9502-26215c94308a",
+		"nadsat": "sinny",
+		"english": "cinema",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "2234d59b-9345-4b3b-ad2e-cd2f75d1b46a",
+		"nadsat": "skazat",
+		"english": "say",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "d71ce677-f94f-498d-a24b-7e991a3f7882",
+		"nadsat": "skitebird",
+		"english": "shithead",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "57d79842-40de-4810-8879-b5c5c97aebba",
+		"nadsat": "skolliwoll",
+		"english": "school",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "eda39bbd-9155-436e-a385-be31a17dbf7a",
+		"nadsat": "skorry",
+		"english": ["quick", "quickly"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "06490f0d-14a6-4001-9c61-f1559edfaee7",
+		"nadsat": "skrike",
+		"english": "scratch",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "5746d4b4-b739-4630-8a55-e19a8e0ab19a",
+		"nadsat": "skvat",
+		"english": "grab",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "a34afa2c-4839-44cf-9ad4-9ae57c9e2f36",
+		"nadsat": "sladky",
+		"english": "sweet",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "91cca2b9-d91e-4c45-aa7b-410b21e3d013",
+		"nadsat": "sloochat",
+		"english": "happen",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "944c2e0d-a97c-47a7-aa76-319a4d4eb5e6",
+		"nadsat": "slooshy",
+		"english": ["listen", "hear"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "585f1d5e-b1ce-415f-89de-da7a8e95aeb7",
+		"nadsat": "slovo",
+		"english": "word",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "2aadd199-73fa-4ea0-9510-0fb0d8298227",
+		"nadsat": "smot",
+		"english": "look",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "b37e07e7-d388-4218-8922-f32bb3270e1d",
+		"nadsat": "sneety",
+		"english": "dream",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "375e8e62-3767-40a7-aea4-fcd9e214dccb",
+		"nadsat": "snoutie",
+		"english": ["tobacco", "snuff"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "6d713ed7-10bd-427d-a0ea-46cf4590a6a8",
+		"nadsat": "snuff it",
+		"english": "die",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "3d02369c-178d-452c-957e-97aa3b2a0206",
+		"nadsat": "sobirat",
+		"english": "pick up",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "ef994d21-ec3b-4517-a184-5a5f322d5349",
+		"nadsat": "soviet",
+		"english": "order",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "e244050e-d162-46c6-8523-df1bb70d28ed",
+		"nadsat": ["spatchka", "zasnoot"],
+		"english": "sleep",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "b424d706-69f2-47eb-bb32-932c6d7093b2",
+		"nadsat": "staja",
+		"english": "state jail",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "5373b118-d485-4bba-b488-dc1f17b41ce0",
+		"nadsat": "starry",
+		"english": ["old", "ancient"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "4c410705-836d-4f70-819d-14c1269c65e1",
+		"nadsat": "strack",
+		"english": "horror",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "362c415c-edf7-4d0a-9d4a-f30ef8539e57",
+		"nadsat": "tally",
+		"english": "waist",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "3374e267-3948-4963-be7a-7e2848d76bf0",
+		"nadsat": "tashtook",
+		"english": "handkerchief",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "65a2ca12-91bd-4e0c-8c00-0ab63a776a07",
+		"nadsat": "terrible",
+		"english": "oozhassny",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "01e82040-4ccf-477f-9acd-d7926175b434",
+		"nadsat": "tolchock",
+		"english": "hit",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "d46f3f4b-4e1d-46d7-8789-a5eacecc045a",
+		"nadsat": "toofles",
+		"english": "slippers",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "e6fb05cf-6009-4130-9227-751104f9543d",
+		"nadsat": "tree",
+		"english": "three",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "6e7ce8ed-c21c-48fc-9ebf-1031db9e0788",
+		"nadsat": "vareet",
+		"english": "happen",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "934b3c25-399c-43c2-999f-e7e25ec3fde9",
+		"nadsat": "vaysay",
+		"english": ["washroom", "toilet", "bathroom", "water closet"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "d1756f82-3f49-4fa0-a276-b7f7596c09b7",
+		"nadsat": "veshch",
+		"english": "thing",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "57ddadd3-e8aa-408d-9d0e-2e3c0c165f1e",
+		"nadsat": "viddy",
+		"english": "see",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "622f9b64-5521-42fe-b6a3-7e2df03abb1e",
+		"nadsat": "von",
+		"english": "smell",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "1dc916b4-f0d3-4da2-b1fe-90640e0239f5",
+		"nadsat": "vred",
+		"english": "harm",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "ee678d3b-4932-4af0-bafd-11dc83b1f020",
+		"nadsat": "warble",
+		"english": "song",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "3fd79532-56a6-4b85-8187-6c25e39252ce",
+		"nadsat": "yahma",
+		"english": "hole",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "aeb21b1b-bda1-4c56-b641-fd6a47359a65",
+		"nadsat": "yahoody",
+		"english": "jew",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "b0269e00-2b8c-4903-b5f6-c2a6d2eee3c8",
+		"nadsat": "yahzick",
+		"english": "tongue",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "a04b08aa-85e0-4ab6-86f3-be3f17e38bff",
+		"nadsat": "yeckate",
+		"english": "drive",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "1fbc1f5c-c3f9-48e4-a540-84d8fcaa65b4",
+		"nadsat": "zammechat",
+		"english": "remarkable",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "0d1c6ffd-5441-4d1b-a90a-57e3fa94b56a",
+		"nadsat": "zoobie",
+		"english": "tooth",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "fedd85aa-5056-4e17-9e18-fb9f5fd4978a",
+		"nadsat": "zvonock",
+		"english": "doorbell",
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
+		"id": "c103ede1-fc83-4fef-ad6d-e2d8b5a3e2ee",
+		"nadsat": "zvook",
+		"english": "sound",
 		"origin": "",
 		"chapters": [],
 		"example": ""
