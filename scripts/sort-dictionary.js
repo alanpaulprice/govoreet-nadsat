@@ -18,11 +18,17 @@ fs.readFile(filePath, "utf8", (err, data) => {
 		// Parse the JSON data
 		const jsonArray = JSON.parse(data);
 
+		jsonArray.forEach((dictionaryEntry) => {
+			if (Array.isArray(dictionaryEntry.nadsat)) dictionaryEntry.nadsat.sort((a, b) => a.localeCompare(b));
+			if (Array.isArray(dictionaryEntry.english)) dictionaryEntry.english.sort((a, b) => a.localeCompare(b));
+		});
+
 		// Sort the array by the "nadsat" property
 		jsonArray.sort((a, b) => {
-			if (a.nadsat < b.nadsat) return -1;
-			if (a.nadsat > b.nadsat) return 1;
-			return 0;
+			const nadsatA = Array.isArray(a.nadsat) ? a.nadsat[0] : a.nadsat;
+			const nadsatB = Array.isArray(b.nadsat) ? b.nadsat[0] : b.nadsat;
+
+			return nadsatA.localeCompare(nadsatB);
 		});
 
 		// Write the sorted array back to the original file
