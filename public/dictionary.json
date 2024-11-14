@@ -50,7 +50,7 @@
 	{
 		"id": "9559756d-3460-429f-b6dd-372f19ea34e6",
 		"nadsat": "bezoomny",
-		"english": ["crazy", "mad", "insane"],
+		"english": ["crazy", "insane", "mad"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -216,6 +216,14 @@
 		"example": ""
 	},
 	{
+		"id": "bfad02ba-e917-45d3-8368-0591bf45aca5",
+		"nadsat": ["cheena", "dama", "devotchka", "forella", "lighter", "ptitsa", "sharp", "soomka", "zheena"],
+		"english": ["girl", "woman"],
+		"origin": "",
+		"chapters": [],
+		"example": ""
+	},
+	{
 		"id": "c3eac5cb-db89-408c-bfdc-71b22ff62f21",
 		"nadsat": "cheest",
 		"english": "wash",
@@ -225,8 +233,8 @@
 	},
 	{
 		"id": "b109e0ef-554b-42fb-af4e-c893d87cb266",
-		"nadsat": ["chelloveck", "veck", "moodge", "orange"],
-		"english": ["man", "gentleman", "person", "fellow"],
+		"nadsat": ["chelloveck", "moodge", "orange", "veck"],
+		"english": ["fellow", "gentleman", "man", "person"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -315,14 +323,6 @@
 		"id": "136c885f-9a13-499f-890b-909713cb1470",
 		"nadsat": "ded",
 		"english": "old man",
-		"origin": "",
-		"chapters": [],
-		"example": ""
-	},
-	{
-		"id": "bfad02ba-e917-45d3-8368-0591bf45aca5",
-		"nadsat": ["devotchka", "ptitsa", "forella", "lighter", "dama", "soomka", "zheena", "cheena", "sharp"],
-		"english": ["woman", "girl"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -490,7 +490,7 @@
 	{
 		"id": "8e576be1-2840-45a4-835f-b7c4ffbadde2",
 		"nadsat": "govoreet",
-		"english": ["talk", "speak"],
+		"english": ["speak", "talk"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -658,7 +658,7 @@
 	{
 		"id": "6e6121a8-ac15-4ce0-a54b-6a428d3c5f15",
 		"nadsat": ["kopat", "pony"],
-		"english": ["get", "understand", "dig"],
+		"english": ["dig", "get", "understand"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -722,7 +722,7 @@
 	{
 		"id": "ebd519fe-275d-42c8-9393-855b0a0ac742",
 		"nadsat": ["lomtick", "shive"],
-		"english": ["slice", "piece", "cut"],
+		"english": ["cut", "piece", "slice"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -786,7 +786,7 @@
 	{
 		"id": "b5ae343e-e6d4-42fc-9338-2f8589614147",
 		"nadsat": "messel",
-		"english": ["thought", "idea"],
+		"english": ["idea", "thought"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -1098,7 +1098,7 @@
 	{
 		"id": "3b1e7530-acd4-4a14-b88f-b7d64d23f360",
 		"nadsat": "plott",
-		"english": ["flesh", "body"],
+		"english": ["body", "flesh"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -1346,7 +1346,7 @@
 	{
 		"id": "c526a2db-7266-469f-a558-a5697f820a5b",
 		"nadsat": "shlaga",
-		"english": ["club", "bat", "cudgel"],
+		"english": ["bat", "club", "cudgel"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -1450,7 +1450,7 @@
 	{
 		"id": "944c2e0d-a97c-47a7-aa76-319a4d4eb5e6",
 		"nadsat": "slooshy",
-		"english": ["listen", "hear"],
+		"english": ["hear", "listen"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -1482,7 +1482,7 @@
 	{
 		"id": "375e8e62-3767-40a7-aea4-fcd9e214dccb",
 		"nadsat": "snoutie",
-		"english": ["tobacco", "snuff"],
+		"english": ["snuff", "tobacco"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -1530,7 +1530,7 @@
 	{
 		"id": "5373b118-d485-4bba-b488-dc1f17b41ce0",
 		"nadsat": "starry",
-		"english": ["old", "ancient"],
+		"english": ["ancient", "old"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
@@ -1602,7 +1602,7 @@
 	{
 		"id": "934b3c25-399c-43c2-999f-e7e25ec3fde9",
 		"nadsat": "vaysay",
-		"english": ["washroom", "toilet", "bathroom", "water closet"],
+		"english": ["bathroom", "toilet", "washroom", "water closet"],
 		"origin": "",
 		"chapters": [],
 		"example": ""
